@@ -1,0 +1,22 @@
+[
+  {
+    "type": "Excel",
+    "domaine": "Bureautique -PAO/CAO",
+    "thematique": "Logiciels bureautique"
+  },
+  {
+    "type": "Photomontage",
+    "domaine": "Bureautique -PAO/CAO",
+    "thematique": "Logiciels PAO - CAO"
+  },
+  {
+    "type": "Gestion",
+    "domaine": "Contrôle de gestion",
+    "thematique": "Les outils du pilotage de la performance"
+  },
+  {
+    "type": "Gestion financière",
+    "domaine": "Finance - Trésorerie",
+    "thematique": "Gestion des associations"
+  }
+]

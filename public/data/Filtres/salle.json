@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "salle": "Salle 1"
+  },
+  {
+    "id": 2,
+    "salle": "Salle 2"
+  },
+  {
+    "id": 3,
+    "salle": "Salle 3"
+  },
+  {
+    "id": 4,
+    "salle": "Salle 4"
+  },
+  {
+    "id": 5,
+    "salle": "Salle 5"
+  },
+  {
+    "id": 6,
+    "salle": "Salle 6"
+  },
+  {
+    "id": 7,
+    "salle": "Salle 7"
+  },
+  {
+    "id": 8,
+    "salle": "Salle 8"
+  },
+  {
+    "id": 9,
+    "salle": "Salle 9"
+  },
+  {
+    "id": 10,
+    "salle": "Salle 10"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "idGrade": 1,
+    "nomGrade": "Novice"
+  },
+  {
+    "idGrade": 2,
+    "nomGrade": "Débutant"
+  },
+  {
+    "idGrade": 3,
+    "nomGrade": "Initié"
+  },
+  {
+    "idGrade": 4,
+    "nomGrade": "Intermédiaire"
+  },
+  {
+    "idGrade": 5,
+    "nomGrade": "Avancé"
+  },
+  {
+    "idGrade": 6,
+    "nomGrade": "Confirmé"
+  },
+  {
+    "idGrade": 7,
+    "nomGrade": "Professionnel"
+  },
+  {
+    "idGrade": 8,
+    "nomGrade": "Expert"
+  },
+  {
+    "idGrade": 9,
+    "nomGrade": "Maître"
+  },
+  {
+    "idGrade": 10,
+    "nomGrade": "Élite"
+  }
+]

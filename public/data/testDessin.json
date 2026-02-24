@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "section": 1,
+    "nomSection": "Les bases",
+    "question": "Il y a combien de type de crayon ?",
+    "reponse": [
+      {
+        "idRep": 1,
+        "rep": 1
+      },
+      {
+        "idRep": 2,
+        "rep": 2
+      },
+      {
+        "idRep": 3,
+        "rep": 3
+      },
+      {
+        "idRep": 4,
+        "rep": 4
+      },
+      {
+        "idRep": 5,
+        "rep": 5
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "section": 1,
+    "nomSection": "Les bases",
+    "question": "Que veut dire le H dans un crayon HB ?",
+    "reponse": [
+      {
+        "idRep": 6,
+        "rep": "High"
+      },
+      {
+        "idRep": 7,
+        "rep": "Hard"
+      },
+      {
+        "idRep": 8,
+        "rep": "Hammer"
+      },
+      {
+        "idRep": 9,
+        "rep": "Hash"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "section": 1,
+    "nomSection": "Les bases",
+    "question": "Qu'est ce que le digital painting ?",
+    "reponse": [
+      {
+        "idRep": 10,
+        "rep": "Dessiner avec de la peinture"
+      },
+      {
+        "idRep": 11,
+        "rep": "Dessiner en utilisant des crayon de couleur"
+      },
+      {
+        "idRep": 12,
+        "rep": "Dessiner avec un logiciel PAO"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "section": 2,
+    "nomSection": "Avancé",
+    "question": "Qu'est ce qu'un masque d'écrêtage ?",
+    "reponse": [
+      {
+        "idRep": 13,
+        "rep": "C'est le fait de masquer les lignes qui dépasse"
+      },
+      {
+        "idRep": 14,
+        "rep": "Ca ne veut rien dire"
+      },
+      {
+        "idRep": 15,
+        "rep": "C'est un filtre utiliser dans un language de développement"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "section": 2,
+    "nomSection": "Avancé",
+    "question": "Quel outil est utilisé pour dessiner avec un logiciel PAO",
+    "reponse": [
+      {
+        "idRep": 16,
+        "rep": "Crayon"
+      },
+      {
+        "idRep": 17,
+        "rep": "Peinceau"
+      },
+      {
+        "idRep": 18,
+        "rep": "Plume"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "section": 3,
+    "nomSection": "Expert",
+    "question": "Comment appelle t-on un logo en noir et blanc dans une charte graphique",
+    "reponse": [
+      {
+        "idRep": 19,
+        "rep": "Noir et Blanc"
+      },
+      {
+        "idRep": 20,
+        "rep": "Achromatique"
+      },
+      {
+        "idRep": 21,
+        "rep": "Grayscale"
+      }
+    ]
+  }
+]

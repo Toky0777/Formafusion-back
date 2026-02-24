@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "matricule": "NMRK001"
+  },
+  {
+    "id": 2,
+    "matricule": "NMRK002"
+  },
+  {
+    "id": 3,
+    "matricule": "NMRK003"
+  },
+  {
+    "id": 4,
+    "matricule": "NMRK004"
+  },
+  {
+    "id": 5,
+    "matricule": "NMRK005"
+  },
+  {
+    "id": 6,
+    "matricule": "NMRK006"
+  },
+  {
+    "id": 7,
+    "matricule": "NMRK007"
+  },
+  {
+    "id": 8,
+    "matricule": "NMRK008"
+  },
+  {
+    "id": 9,
+    "matricule": "NMRK009"
+  },
+  {
+    "id": 10,
+    "matricule": "NMRK0010"
+  }
+]

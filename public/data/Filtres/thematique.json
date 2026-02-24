@@ -1,0 +1,94 @@
+[
+  {
+    "id": 1,
+    "thematique": "Management et métiers des achats"
+  },
+  {
+    "id": 2,
+    "thematique": "Négociation d'achat"
+  },
+  {
+    "id": 3,
+    "thematique": "Achats : méthodes et outils"
+  },
+  {
+    "id": 4,
+    "thematique": "Achats publics"
+  },
+  {
+    "id": 5,
+    "thematique": "Les métiers"
+  },
+  {
+    "id": 6,
+    "thematique": "Efficacité professionnelle de l'assistant(e)"
+  },
+  {
+    "id": 7,
+    "thematique": "Communication de l’assistant(e)"
+  },
+  {
+    "id": 8,
+    "thematique": "Développement personnel de l'assistant(e)"
+  },
+  {
+    "id": 9,
+    "thematique": "Gestion d'actifs"
+  },
+  {
+    "id": 10,
+    "thematique": "Gestion du Patrimoine"
+  },
+  {
+    "id": 11,
+    "thematique": "Gestion des risques et Bâle III"
+  },
+  {
+    "id": 12,
+    "thematique": "Contrôle interne et conformité"
+  },
+  {
+    "id": 13,
+    "thematique": "Comptabilité, normes IFRS, contrôle de gestion"
+  },
+  {
+    "id": 14,
+    "thematique": "Recouvrement et contentieux"
+  },
+  {
+    "id": 15,
+    "thematique": "Marchés des entreprises"
+  },
+  {
+    "id": 16,
+    "thematique": "Logiciels bureautique"
+  },
+  {
+    "id": 17,
+    "thematique": "Outils collaboratifs"
+  },
+  {
+    "id": 18,
+    "thematique": "Logiciels PAO - CAO"
+  },
+  {
+    "id": 19,
+    "thematique": "Accompagnement au changement"
+  },
+  {
+    "id": 20,
+    "thematique": "Adaptation au changement"
+  },
+  {
+    "id": 21,
+    "thematique": "Devenir Coach professionnel"
+  },
+  {
+    "id": 22,
+    "thematique": "Vente et négociation"
+  },
+  {
+    "id": 23,
+    "thematique": "Management commercial"
+  }
+]

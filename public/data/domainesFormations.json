@@ -1,0 +1,398 @@
+[
+  {
+    "id": 1,
+    "domaine": "Achats",
+    "icon": "shop",
+    "couleur": "blue",
+    "thematique": [
+      "Management et métiers des achats",
+      "Négociation d'achat",
+      "Achats : méthodes et outils",
+      "Achats publics"
+    ]
+  },
+  {
+    "id": 2,
+    "domaine": "Assistant(e)",
+    "icon": "headphones",
+    "couleur": "orange",
+    "thematique": [
+      "Les métiers",
+      "Efficacité professionnelle de l'assistant(e)",
+      "Communication de l’assistant(e)",
+      "Développement personnel de l'assistant(e)"
+    ]
+  },
+  {
+    "id": 3,
+    "domaine": "Audit - Organisation - Conseil",
+    "icon": "sitemap",
+    "couleur": "red",
+    "thematique": [
+      "Audit et contrôle interne",
+      "Organisation - Conseil",
+      "Le Lean"
+    ]
+  },
+  {
+    "id": 4,
+    "domaine": "Banque",
+    "icon": "building-columns",
+    "couleur": "purple",
+    "thematique": [
+      "Gestion d'actifs",
+      "Gestion du Patrimoine",
+      "Gestion des risques et Bâle III",
+      "Contrôle interne et conformité",
+      "Comptabilité, normes IFRS, contrôle de gestion",
+      "Recouvrement et contentieux",
+      "Marchés des entreprises"
+    ]
+  },
+  {
+    "id": 5,
+    "domaine": "Bureautique - PAO/CAO",
+    "icon": "briefcase",
+    "couleur": "yellow",
+    "thematique": [
+      "Logiciels bureautique",
+      "Outils collaboratifs",
+      "Logiciels PAO - CAO"
+    ]
+  },
+  {
+    "id": 6,
+    "domaine": "Coaching",
+    "icon": "angle-up",
+    "couleur": "black",
+    "thematique": [
+      "Devenir Coach professionnel"
+    ]
+  },
+  {
+    "id": 7,
+    "domaine": "Commercial - Ventes",
+    "icon": "cash-register",
+    "couleur": "green",
+    "thematique": [
+      "Vente et négociation",
+      "Management commercial"
+    ]
+  },
+  {
+    "id": 8,
+    "domaine": "Communication",
+    "icon": "satellite-dish",
+    "couleur": "pink",
+    "thematique": [
+      "Communication interne et externe",
+      "Communiquer à l'oral",
+      "Communiquer à l'écrit"
+    ]
+  },
+  {
+    "id": 9,
+    "domaine": "Comptabilité - Fiscalité",
+    "icon": "calculator",
+    "couleur": "gray",
+    "thematique": [
+      "Comptabilité",
+      "Fiscalité"
+    ]
+  },
+  {
+    "id": 10,
+    "domaine": "Conduite du changement",
+    "icon": "dice",
+    "couleur": "blue",
+    "thematique": [
+      "Accompagnement au changement",
+      "Adaptation au changement"
+    ]
+  },
+  {
+    "id": 11,
+    "domaine": "Contrôle de gestion",
+    "icon": "folder-tree",
+    "couleur": "pink",
+    "thematique": [
+      "Pratiques et métiers du contrôle de gestion",
+      "Les outils du pilotage de la performance",
+      "Le contrôle de gestion sectoriel et par fonction",
+      "Business partner : communiquer et challenger les opérationnels",
+      "Analyse et visualisation des data"
+    ]
+  },
+  {
+    "id": 12,
+    "domaine": "Création d’entreprise",
+    "icon": "shop",
+    "couleur": "black",
+    "thematique": [
+      "Créer son entreprise",
+      "Financer et développer son activité",
+      "Être entrepreneur"
+    ]
+  },
+  {
+    "id": 13,
+    "domaine": "Digital",
+    "icon": "shop",
+    "couleur": "yellow",
+    "thematique": [
+      "Management et gouvernance",
+      "Culture digitale",
+      "Risques numériques",
+      "Marketing digital et Communication digitale"
+    ]
+  },
+  {
+    "id": 14,
+    "domaine": "Direction",
+    "icon": "shop",
+    "couleur": "green",
+    "thematique": [
+      "Direction - Management",
+      "RSE / Développement durable",
+      "Nouvelles formes du travail",
+      "Finance - Gestion",
+      "Ressources humaines",
+      "Entreprise digitale",
+      "Commercial Marketing",
+      "Efficacité personnelle - Communication",
+      "Leadership",
+      "Gérer son patrimoine"
+    ]
+  },
+  {
+    "id": 15,
+    "domaine": "Droit",
+    "icon": "shop",
+    "couleur": "red",
+    "thematique": [
+      "Droit du travail et relations sociales",
+      "Relations sociales",
+      "Formation des élu(e)s : CSE, CSSCT…",
+      "Santé et qualité de vie au travail, risques psychosociaux"
+    ]
+  },
+  {
+    "id": 16,
+    "domaine": "Droit des affaires",
+    "icon": "shop",
+    "couleur": "orange",
+    "thematique": [
+      "Formation juridique - Droit des sociétés",
+      "Droit des contrats et obligations légales"
+    ]
+  },
+  {
+    "id": 17,
+    "domaine": "Développement personnel",
+    "icon": "shop",
+    "couleur": "purple",
+    "thematique": [
+      "Affirmation de soi",
+      "Estime et confiance en soi",
+      "Connaissance de soi et des autres",
+      "Gestion du stress",
+      "Gestion des émotions",
+      "Bien-être au travail",
+      "Coopération",
+      "Parcours professionnel - Changement - Retraite",
+      "Relations interpersonnelles - Communication",
+      "Leadership et impact personnel"
+    ]
+  },
+  {
+    "id": 18,
+    "domaine": "Efficacité professionnelle",
+    "icon": "shop",
+    "couleur": "yellow",
+    "thematique": [
+      "Prise de parole en public",
+      "Communication écrite",
+      "Synthèse écrite & orale",
+      "Gestion du temps",
+      "Créativité et capacités d'adaptation",
+      "Organisation et télétravail",
+      "Apprentissage et transmission",
+      "Prise de décision",
+      "Capacités relationnelles et collaboration",
+      "Réunion - Intelligence collective"
+    ]
+  },
+  {
+    "id": 19,
+    "domaine": "Finance - Trésorerie",
+    "icon": "shop",
+    "couleur": "blue",
+    "thematique": [
+      "Finance - Trésorerie",
+      "Finance - Gestion pour non-spécialistes",
+      "Gestion des associations",
+      "Risque-client et contentieux"
+    ]
+  },
+  {
+    "id": 20,
+    "domaine": "Formation",
+    "icon": "shop",
+    "couleur": "pink",
+    "thematique": [
+      " Formation de formateurs",
+      "Tutorat",
+      "Métiers de la formation",
+      "Pilotage de la formation et du développement des compétences",
+      "Droit et gestion de la formation",
+      "Ingénierie de la formation et de la professionnalisation"
+    ]
+  },
+  {
+    "id": 21,
+    "domaine": "Formations OPCOMMERCE",
+    "icon": "shop",
+    "couleur": "red",
+    "thematique": []
+  },
+  {
+    "id": 22,
+    "domaine": "Gestion du temps",
+    "icon": "shop",
+    "couleur": "gray",
+    "thematique": []
+  },
+  {
+    "id": 23,
+    "domaine": "Immo",
+    "icon": "shop",
+    "couleur": "orange",
+    "thematique": []
+  },
+  {
+    "id": 24,
+    "domaine": "Informatique",
+    "icon": "shop",
+    "couleur": "gray",
+    "thematique": []
+  },
+  {
+    "id": 25,
+    "domaine": "Innovation",
+    "icon": "shop",
+    "couleur": "gray",
+    "thematique": []
+  },
+  {
+    "id": 26,
+    "domaine": "International",
+    "icon": "shop",
+    "couleur": "gray",
+    "thematique": []
+  },
+  {
+    "id": 27,
+    "domaine": "Logistique",
+    "icon": "shop",
+    "couleur": "gray",
+    "thematique": []
+  },
+  {
+    "id": 28,
+    "domaine": "Management et leadership",
+    "icon": "shop",
+    "couleur": "gray",
+    "thematique": []
+  },
+  {
+    "id": 29,
+    "domaine": "Marketing - Marketing digital",
+    "icon": "shop",
+    "couleur": "gray",
+    "thematique": []
+  },
+  {
+    "id": 30,
+    "domaine": "Paie/Admin.",
+    "icon": "shop",
+    "couleur": "gray",
+    "thematique": []
+  },
+  {
+    "id": 31,
+    "domaine": "Production - Lean",
+    "icon": "shop",
+    "couleur": "gray",
+    "thematique": []
+  },
+  {
+    "id": 32,
+    "domaine": "Projet",
+    "icon": "shop",
+    "couleur": "gray",
+    "thematique": []
+  },
+  {
+    "id": 33,
+    "domaine": "QSE",
+    "icon": "shop",
+    "couleur": "gray",
+    "thematique": []
+  },
+  {
+    "id": 34,
+    "domaine": "QVT",
+    "icon": "shop",
+    "couleur": "gray",
+    "thematique": []
+  },
+  {
+    "id": 35,
+    "domaine": "RSE",
+    "icon": "shop",
+    "couleur": "gray",
+    "thematique": []
+  },
+  {
+    "id": 36,
+    "domaine": "Relation client",
+    "icon": "shop",
+    "couleur": "gray",
+    "thematique": []
+  },
+  {
+    "id": 37,
+    "domaine": "Ressources humaines",
+    "icon": "shop",
+    "couleur": "gray",
+    "thematique": []
+  },
+  {
+    "id": 38,
+    "domaine": "Secteur public",
+    "icon": "shop",
+    "couleur": "gray",
+    "thematique": []
+  },
+  {
+    "id": 39,
+    "domaine": "Soft skills",
+    "icon": "shop",
+    "couleur": "gray",
+    "thematique": []
+  },
+  {
+    "id": 40,
+    "domaine": "Travail à distance",
+    "icon": "shop",
+    "couleur": "gray",
+    "thematique": []
+  },
+  {
+    "id": 41,
+    "domaine": "Web",
+    "icon": "shop",
+    "couleur": "gray",
+    "thematique": []
+  }
+]

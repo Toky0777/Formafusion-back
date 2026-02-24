@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dp_title div {
+  color: #374151;
+  font-size: 1em;
+}
+
+.modal_default_inner {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal_default_main {
+  /* border: 10px solid rgb(204, 204, 204); */
+  border: none !important;
+  border-radius: 8px;
+  max-width: 90%;
+}
+
+/* .modal_default_form_item textarea {
+  width: 100%;
+  height: 85px !important;
+  box-sizing: border-box;
+} */
+
+.modal_default_form_item {
+  padding: 0px !important;
+}
+
+.modal_default_form_item input,
+textarea {
+  border: 1px solid rgb(221, 221, 221);
+  height: 28px;
+  border-radius: 4px;
+  padding: 8px !important;
+}
+
+.modal_default_form_item input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #374151;
+}
+
+.modal_default_form_item label {
+  display: flex !important;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.modal_default_buttons {
+  padding: 10px 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 8px;
+}
+
+.modal_default_ok {
+  padding: 3px;
+  width: 80px;
+  background-color: #374151;
+  color: white;
+  border-radius: 4px;
+  opacity: .8;
+}
+
+.modal_default_cancel {
+  padding: 3px;
+  width: 80px;
+  border: 1px solid rgb(210 210 210);
+  border-radius: 4px;
+  color: rgb(153, 153, 153);
+}
+
+.scheduler_default_timeheadercol_inner {
+  /* position: absolute;
+  inset: 0px;
+  border-right: 1px solid rgb(192, 192, 192);
+  display: flex;
+  align-items: center;
+  justify-content: center; */
+  font-size: .8em;
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "nom": "Ordinateur",
+    "nombre": 5
+  },
+  {
+    "id": 2,
+    "nom": "Souris",
+    "nombre": 5
+  },
+  {
+    "id": 3,
+    "nom": "Clavier",
+    "nombre": 5
+  },
+  {
+    "id": 4,
+    "nom": "Cable HDMI",
+    "nombre": 5
+  },
+  {
+    "id": 5,
+    "nom": "Video projecteur",
+    "nombre": 5
+  }
+]

@@ -1,0 +1,34 @@
+vendor
+node_modules
+config/datagase.php
+storage/debugbar/
+.vscode
+composer.lock
+public/fonts/
+.env
+test.http
+_ide_helper.php
+
+# Environnement virtuel
+venv/
+__pycache__/
+*.pyc
+
+# Modèles entraînés
+models/*.pkl
+!models/.gitkeep
+
+# Données
+data/*.csv
+!data/.gitkeep
+
+# Logs
+*.log
+
+# Cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE
+.idea/

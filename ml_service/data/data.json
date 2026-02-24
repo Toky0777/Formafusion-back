@@ -1,0 +1,510 @@
+{
+    "success": true,
+    "count": 56,
+    "data": [
+        {
+            "duree_jours": 5,
+            "nb_places": 3,
+            "mois": 3,
+            "type_projet": 1,
+            "recettes": 2160000,
+            "depenses": 0,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 5,
+            "nb_places": 2,
+            "mois": 2,
+            "type_projet": 1,
+            "recettes": 1440000,
+            "depenses": 2880000,
+            "est_rentable": 0
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 6,
+            "mois": 3,
+            "type_projet": 1,
+            "recettes": 1920000,
+            "depenses": 0,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 1,
+            "mois": 3,
+            "type_projet": 1,
+            "recettes": 320000,
+            "depenses": 0,
+            "est_rentable": 0
+        },
+        {
+            "duree_jours": 5,
+            "nb_places": 1,
+            "mois": 2,
+            "type_projet": 1,
+            "recettes": 640000,
+            "depenses": 0,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 5,
+            "nb_places": 3,
+            "mois": 2,
+            "type_projet": 1,
+            "recettes": 2700000,
+            "depenses": 0,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 5,
+            "nb_places": 4,
+            "mois": 2,
+            "type_projet": 1,
+            "recettes": 3600000,
+            "depenses": 0,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 10,
+            "mois": 2,
+            "type_projet": 1,
+            "recettes": 3200000,
+            "depenses": 0,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 12,
+            "mois": 2,
+            "type_projet": 1,
+            "recettes": 3600000,
+            "depenses": 0,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 1,
+            "mois": 2,
+            "type_projet": 1,
+            "recettes": 450000,
+            "depenses": 0,
+            "est_rentable": 0
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 30,
+            "mois": 2,
+            "type_projet": 1,
+            "recettes": 9000000,
+            "depenses": 0,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 5,
+            "nb_places": 10,
+            "mois": 2,
+            "type_projet": 1,
+            "recettes": 6400000,
+            "depenses": 0,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 30,
+            "mois": 1,
+            "type_projet": 1,
+            "recettes": 9000000,
+            "depenses": 3750000,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 51,
+            "mois": 2,
+            "type_projet": 1,
+            "recettes": 15300000,
+            "depenses": -2550000,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 6,
+            "mois": 2,
+            "type_projet": 1,
+            "recettes": 2700000,
+            "depenses": 0,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 5,
+            "nb_places": 8,
+            "mois": 2,
+            "type_projet": 1,
+            "recettes": 5120000,
+            "depenses": 0,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 5,
+            "nb_places": 7,
+            "mois": 1,
+            "type_projet": 1,
+            "recettes": 4480000,
+            "depenses": -1880000,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 12,
+            "mois": 1,
+            "type_projet": 1,
+            "recettes": 3600000,
+            "depenses": 0,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 1,
+            "mois": 1,
+            "type_projet": 1,
+            "recettes": 450000,
+            "depenses": 0,
+            "est_rentable": 0
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 1,
+            "mois": 1,
+            "type_projet": 1,
+            "recettes": 450000,
+            "depenses": 0,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 5,
+            "nb_places": 3,
+            "mois": 1,
+            "type_projet": 1,
+            "recettes": 1920000,
+            "depenses": 0,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 8,
+            "mois": 1,
+            "type_projet": 1,
+            "recettes": 2560000,
+            "depenses": -320000,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 21,
+            "mois": 1,
+            "type_projet": 1,
+            "recettes": 6720000,
+            "depenses": -1920000,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 21,
+            "mois": 1,
+            "type_projet": 1,
+            "recettes": 6720000,
+            "depenses": -1920000,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 5,
+            "nb_places": 1,
+            "mois": 12,
+            "type_projet": 1,
+            "recettes": 640000,
+            "depenses": 0,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 1,
+            "mois": 11,
+            "type_projet": 1,
+            "recettes": 450000,
+            "depenses": 0,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 5,
+            "nb_places": 1,
+            "mois": 12,
+            "type_projet": 1,
+            "recettes": 640000,
+            "depenses": 0,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 5,
+            "mois": 12,
+            "type_projet": 1,
+            "recettes": 1600000,
+            "depenses": 400000,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 5,
+            "mois": 12,
+            "type_projet": 1,
+            "recettes": 1600000,
+            "depenses": 400000,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 16,
+            "mois": 12,
+            "type_projet": 1,
+            "recettes": 5120000,
+            "depenses": -2240000,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 2,
+            "mois": 12,
+            "type_projet": 1,
+            "recettes": 400000,
+            "depenses": -200000,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 2,
+            "mois": 12,
+            "type_projet": 1,
+            "recettes": 600000,
+            "depenses": 300000,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 6,
+            "mois": 12,
+            "type_projet": 1,
+            "recettes": 2700000,
+            "depenses": 450000,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 14,
+            "mois": 12,
+            "type_projet": 1,
+            "recettes": 4480000,
+            "depenses": 0,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 2,
+            "mois": 12,
+            "type_projet": 1,
+            "recettes": 600000,
+            "depenses": 300000,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 1,
+            "mois": 12,
+            "type_projet": 1,
+            "recettes": 320000,
+            "depenses": 0,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 2,
+            "mois": 12,
+            "type_projet": 1,
+            "recettes": 400000,
+            "depenses": -200000,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 8,
+            "mois": 12,
+            "type_projet": 1,
+            "recettes": 2560000,
+            "depenses": -560000,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 4,
+            "mois": 12,
+            "type_projet": 1,
+            "recettes": 1280000,
+            "depenses": 720000,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 8,
+            "mois": 12,
+            "type_projet": 1,
+            "recettes": 3600000,
+            "depenses": -600000,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 8,
+            "mois": 11,
+            "type_projet": 1,
+            "recettes": 2560000,
+            "depenses": 640000,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 1,
+            "mois": 11,
+            "type_projet": 1,
+            "recettes": 320000,
+            "depenses": -96000,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 12,
+            "mois": 11,
+            "type_projet": 1,
+            "recettes": 5400000,
+            "depenses": -1800000,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 1,
+            "mois": 11,
+            "type_projet": 1,
+            "recettes": 450000,
+            "depenses": 0,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 11,
+            "mois": 11,
+            "type_projet": 1,
+            "recettes": 3520000,
+            "depenses": -320000,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 12,
+            "mois": 11,
+            "type_projet": 1,
+            "recettes": 2160000,
+            "depenses": 0,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 2,
+            "mois": 11,
+            "type_projet": 1,
+            "recettes": 600000,
+            "depenses": 600000,
+            "est_rentable": 0
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 4,
+            "mois": 11,
+            "type_projet": 1,
+            "recettes": 1200000,
+            "depenses": 0,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 16,
+            "mois": 11,
+            "type_projet": 1,
+            "recettes": 5120000,
+            "depenses": -2240000,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 2,
+            "mois": 11,
+            "type_projet": 1,
+            "recettes": 900000,
+            "depenses": 0,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 9,
+            "mois": 11,
+            "type_projet": 1,
+            "recettes": 4050000,
+            "depenses": -1650000,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 2,
+            "mois": 11,
+            "type_projet": 1,
+            "recettes": 900000,
+            "depenses": 0,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 11,
+            "mois": 11,
+            "type_projet": 1,
+            "recettes": 4950000,
+            "depenses": -750000,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 1,
+            "mois": 11,
+            "type_projet": 1,
+            "recettes": 320000,
+            "depenses": -96000,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 5,
+            "nb_places": 10,
+            "mois": 7,
+            "type_projet": 1,
+            "recettes": 9000000,
+            "depenses": -5800000,
+            "est_rentable": 1
+        },
+        {
+            "duree_jours": 2,
+            "nb_places": 10,
+            "mois": 10,
+            "type_projet": 1,
+            "recettes": 4500000,
+            "depenses": -300000,
+            "est_rentable": 1
+        }
+    ]
+}

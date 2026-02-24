@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "materiel": "Video projecteur"
+  },
+  {
+    "id": 2,
+    "materiel": "Ordinateur"
+  },
+  {
+    "id": 3,
+    "materiel": "Tablette"
+  },
+  {
+    "id": 4,
+    "materiel": "Imprimante"
+  },
+  {
+    "id": 5,
+    "materiel": "Scanner"
+  },
+  {
+    "id": 6,
+    "materiel": "Téléphone portable"
+  },
+  {
+    "id": 7,
+    "materiel": "Casque audio"
+  },
+  {
+    "id": 8,
+    "materiel": "Caméra"
+  },
+  {
+    "id": 9,
+    "materiel": "Microphone"
+  },
+  {
+    "id": 10,
+    "materiel": "Écran tactile"
+  }
+]

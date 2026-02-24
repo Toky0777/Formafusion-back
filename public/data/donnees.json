@@ -1,0 +1,37 @@
+[
+  {
+    "module": "Power BI Niveau I",
+    "valeur": 1622837600,
+    "barProgress": "80"
+  },
+  {
+    "module": "Excel Niveau I",
+    "valeur": 1419982900,
+    "barProgress": "70"
+  },
+  {
+    "module": "Photoshop",
+    "valeur": 1014273500,
+    "barProgress": "50"
+  },
+  {
+    "module": "Illustrator",
+    "valeur": 507136750,
+    "barProgress": "25"
+  },
+  {
+    "module": "Microsof Word",
+    "valeur": 405709400,
+    "barProgress": "20"
+  },
+  {
+    "module": "Power Point",
+    "valeur": 344852990,
+    "barProgress": "17"
+  },
+  {
+    "module": "Dessin",
+    "valeur": 101427350,
+    "barProgress": "5"
+  }
+]

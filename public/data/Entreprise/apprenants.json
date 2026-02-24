@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "nom": "Alice Dupont",
+    "contact": "+1 123-456-7890",
+    "email": "alice.dupont@example.com",
+    "cin": "A12345",
+    "adresse": "123 Rue de la République, 75001 Paris",
+    "fonction": "Ingénieur"
+  },
+  {
+    "id": 2,
+    "nom": "Bob Martin",
+    "contact": "+1 987-654-3210",
+    "email": "bob.martin@example.com",
+    "cin": "B67890",
+    "adresse": "456 Elm Street, New York, NY 10001",
+    "fonction": "Designer"
+  },
+  {
+    "id": 3,
+    "nom": "Charlie Brown",
+    "contact": "+1 555-123-4567",
+    "email": "charlie.brown@example.com",
+    "cin": "C54321",
+    "adresse": "789 Oak Avenue, Los Angeles, CA 90001",
+    "fonction": "Étudiant"
+  },
+  {
+    "id": 4,
+    "nom": "David Johnson",
+    "contact": "+1 333-555-8888",
+    "email": "david.johnson@example.com",
+    "cin": "D88888",
+    "adresse": "1010 Pine Street, San Francisco, CA 94101",
+    "fonction": "Professeur"
+  },
+  {
+    "id": 5,
+    "nom": "Ella Smith",
+    "contact": "+1 777-999-0000",
+    "email": "ella.smith@example.com",
+    "cin": "E77777",
+    "adresse": "222 Maple Road, Chicago, IL 60601",
+    "fonction": "Manager"
+  },
+  {
+    "id": 6,
+    "nom": "Frank White",
+    "contact": "+1 444-666-2222",
+    "email": "frank.white@example.com",
+    "cin": "F66666",
+    "adresse": "333 Cedar Lane, Miami, FL 33101",
+    "fonction": "Artiste"
+  },
+  {
+    "id": 7,
+    "nom": "Grace Lee",
+    "contact": "+1 999-111-3333",
+    "email": "grace.lee@example.com",
+    "cin": "G11111",
+    "adresse": "444 Birch Street, Houston, TX 77001",
+    "fonction": "Avocat"
+  },
+  {
+    "id": 8,
+    "nom": "Henry Davis",
+    "contact": "+1 222-888-4444",
+    "email": "henry.davis@example.com",
+    "cin": "H44444",
+    "adresse": "555 Spruce Avenue, Seattle, WA 98101",
+    "fonction": "Consultant"
+  },
+  {
+    "id": 9,
+    "nom": "Isabel Rodriguez",
+    "contact": "+1 111-222-3333",
+    "email": "isabel.rodriguez@example.com",
+    "cin": "I22222",
+    "adresse": "666 Pineapple Street, Boston, MA 02201",
+    "fonction": "Infirmière"
+  },
+  {
+    "id": 10,
+    "nom": "Jack Turner",
+    "contact": "+1 555-777-1111",
+    "email": "jack.turner@example.com",
+    "cin": "J77777",
+    "adresse": "777 Orange Avenue, Dallas, TX 75201",
+    "fonction": "Entrepreneur"
+  }
+]

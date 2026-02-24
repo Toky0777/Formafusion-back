@@ -1,0 +1,142 @@
+[
+  {
+    "idQuiz": 1,
+    "nomQuiz": "Test Excel Numerika",
+    "score": 27,
+    "total": 32,
+    "candidats": 16
+  },
+  {
+    "idQuiz": 2,
+    "nomQuiz": "Quiz de mathématiques",
+    "score": 18,
+    "total": 20,
+    "candidats": 25
+  },
+  {
+    "idQuiz": 3,
+    "nomQuiz": "Test de géographie",
+    "score": 22,
+    "total": 25,
+    "candidats": 12
+  },
+  {
+    "idQuiz": 4,
+    "nomQuiz": "Examen de sciences",
+    "score": 30,
+    "total": 35,
+    "candidats": 30
+  },
+  {
+    "idQuiz": 5,
+    "nomQuiz": "Quiz d'histoire",
+    "score": 15,
+    "total": 18,
+    "candidats": 22
+  },
+  {
+    "idQuiz": 6,
+    "nomQuiz": "Test de français",
+    "score": 28,
+    "total": 30,
+    "candidats": 18
+  },
+  {
+    "idQuiz": 7,
+    "nomQuiz": "Examen de chimie",
+    "score": 19,
+    "total": 24,
+    "candidats": 15
+  },
+  {
+    "idQuiz": 8,
+    "nomQuiz": "Quiz de physique",
+    "score": 23,
+    "total": 25,
+    "candidats": 20
+  },
+  {
+    "idQuiz": 9,
+    "nomQuiz": "Test de biologie",
+    "score": 16,
+    "total": 20,
+    "candidats": 14
+  },
+  {
+    "idQuiz": 10,
+    "nomQuiz": "Examen de programmation",
+    "score": 28,
+    "total": 30,
+    "candidats": 24
+  },
+  {
+    "idQuiz": 11,
+    "nomQuiz": "Quiz de musique",
+    "score": 12,
+    "total": 15,
+    "candidats": 18
+  },
+  {
+    "idQuiz": 12,
+    "nomQuiz": "Test de langues étrangères",
+    "score": 21,
+    "total": 25,
+    "candidats": 28
+  },
+  {
+    "idQuiz": 13,
+    "nomQuiz": "Examen d'économie",
+    "score": 26,
+    "total": 30,
+    "candidats": 21
+  },
+  {
+    "idQuiz": 14,
+    "nomQuiz": "Quiz de politique",
+    "score": 17,
+    "total": 20,
+    "candidats": 19
+  },
+  {
+    "idQuiz": 15,
+    "nomQuiz": "Test de psychologie",
+    "score": 24,
+    "total": 28,
+    "candidats": 17
+  },
+  {
+    "idQuiz": 16,
+    "nomQuiz": "Examen de droit",
+    "score": 29,
+    "total": 32,
+    "candidats": 23
+  },
+  {
+    "idQuiz": 17,
+    "nomQuiz": "Quiz de philosophie",
+    "score": 20,
+    "total": 24,
+    "candidats": 16
+  },
+  {
+    "idQuiz": 18,
+    "nomQuiz": "Test de sociologie",
+    "score": 22,
+    "total": 26,
+    "candidats": 14
+  },
+  {
+    "idQuiz": 19,
+    "nomQuiz": "Examen d'histoire de l'art",
+    "score": 27,
+    "total": 30,
+    "candidats": 20
+  },
+  {
+    "idQuiz": 20,
+    "nomQuiz": "Quiz de littérature",
+    "score": 18,
+    "total": 20,
+    "candidats": 15
+  }
+]

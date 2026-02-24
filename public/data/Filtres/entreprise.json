@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "entreprise": "NUMERIKA CENTER"
+  },
+  {
+    "id": 2,
+    "entreprise": "GRAPHITECH"
+  },
+  {
+    "id": 3,
+    "entreprise": "TECHNOLOGIX INC."
+  },
+  {
+    "id": 4,
+    "entreprise": "CYBERWARE SOLUTIONS"
+  },
+  {
+    "id": 5,
+    "entreprise": "DATAFUSION CORP"
+  },
+  {
+    "id": 6,
+    "entreprise": "INNOVATECH SYSTEMS"
+  },
+  {
+    "id": 7,
+    "entreprise": "GLOBALNETWORKS"
+  },
+  {
+    "id": 8,
+    "entreprise": "FUTURESCAPE ENTERPRISES"
+  },
+  {
+    "id": 9,
+    "entreprise": "INTELLISYS TECH"
+  },
+  {
+    "id": 10,
+    "entreprise": "MINDFIRE SOLUTIONS"
+  }
+]

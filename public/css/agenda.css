@@ -1,0 +1,53 @@
+ /* Styles pour les cases à cocher cochées */
+ input[type="checkbox"]:checked {
+   background-color: #A855F7;
+   border: 1px solid #A855F7;
+   border-radius: 6px;
+   outline-color: #A855F7;
+ }
+
+ .form-checkbox-custom:active {
+   outline-color: #A855F7;
+ }
+
+ .form-checkbox-custom:focus {
+   outline-color: #A855F7;
+ }
+
+ .form-checkbox-custom:checked:hover {
+   background-color: #9439e9;
+   border: 1px solid #9439e9;
+   border-radius: 6px;
+
+ }
+
+ .form-checkbox-custom:checked:focus {
+   background-color: #A855F7;
+   border-radius: 6px;
+   outline-color: #9439e9;
+ }
+
+ /* Styles pour le cercle intérieur de la case à cocher cochée */
+ .form-checkbox-custom:checked::before {
+   border: white;
+ }
+
+ .search {
+   border: 1px solid #718096;
+   box-shadow: none;
+ }
+
+ .search:focus {
+   border: 1px solid #A855F7;
+   box-shadow: none;
+   transition-delay: 150ms;
+ }
+
+ .dropdown {
+   border: 1px solid #718096
+ }
+
+ .dropdown:focus {
+   border: 1px solid #A855F7;
+   transition-delay: 150ms;
+ }

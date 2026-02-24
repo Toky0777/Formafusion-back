@@ -1,0 +1,240 @@
+[apps/update-manager]
+first-run=false
+launch-count=1
+launch-time=int64 1718613056
+show-details=true
+window-height=400
+window-width=642
+
+[com/ubuntu/update-notifier]
+release-check-time=uint32 1718633025
+
+[io/github/celluloid-player/celluloid]
+settings-migrated=true
+
+[io/github/celluloid-player/celluloid/window-state]
+height=322
+loop-playlist=false
+maximized=true
+playlist-width=250
+show-controls=true
+show-playlist=false
+volume=1.0
+width=384
+
+[org/gnome/Totem]
+active-plugins=['rotation', 'recent', 'autoload-subtitles', 'apple-trailers', 'open-directory', 'mpris', 'vimeo', 'save-file', 'screensaver', 'variable-rate', 'screenshot', 'skipto', 'movie-properties']
+subtitle-encoding='UTF-8'
+
+[org/gnome/calculator]
+accuracy=9
+angle-units='degrees'
+base=10
+button-mode='basic'
+number-format='automatic'
+refresh-interval=604800
+show-thousands=true
+show-zeroes=false
+source-currency=''
+source-units='degree'
+target-currency=''
+target-units='radian'
+window-position=(26, 23)
+word-size=64
+
+[org/gnome/control-center]
+last-panel='bluetooth'
+
+[org/gnome/deja-dup]
+backend='google'
+prompt-check='2024-06-17T08:06:45.279692Z'
+
+[org/gnome/desktop/app-folders]
+folder-children=['Utilities', 'YaST']
+
+[org/gnome/desktop/app-folders/folders/Utilities]
+apps=['gnome-abrt.desktop', 'gnome-system-log.desktop', 'nm-connection-editor.desktop', 'org.gnome.baobab.desktop', 'org.gnome.Connections.desktop', 'org.gnome.DejaDup.desktop', 'org.gnome.Dictionary.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.eog.desktop', 'org.gnome.Evince.desktop', 'org.gnome.FileRoller.desktop', 'org.gnome.fonts.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.Usage.desktop', 'vinagre.desktop']
+categories=['X-GNOME-Utilities']
+name='X-GNOME-Utilities.directory'
+translate=true
+
+[org/gnome/desktop/app-folders/folders/YaST]
+categories=['X-SuSE-YaST']
+name='suse-yast.directory'
+translate=true
+
+[org/gnome/desktop/input-sources]
+sources=[('xkb', 'fr+latin9')]
+xkb-options=@as []
+
+[org/gnome/desktop/interface]
+color-scheme='prefer-dark'
+document-font-name='Sans 10'
+font-hinting='slight'
+font-name='Ubuntu 10'
+gtk-theme='Yaru-olive-dark'
+icon-theme='Yaru-olive'
+
+[org/gnome/desktop/notifications]
+application-children=['io-github-celluloid-player-celluloid', 'vlc', 'update-manager', 'org-gnome-nautilus', 'org-gnome-software', 'firefox-firefox', 'org-gnome-terminal', 'xdg-desktop-portal-gnome', 'org-gnome-totem', 'com-github-unrud-videodownloader', 'synaptic', 'gnome-control-center', 'gnome-power-panel', 'org-qbittorrent-qbittorrent']
+
+[org/gnome/desktop/notifications/application/com-github-unrud-videodownloader]
+application-id='com.github.unrud.VideoDownloader.desktop'
+
+[org/gnome/desktop/notifications/application/firefox-firefox]
+application-id='firefox_firefox.desktop'
+
+[org/gnome/desktop/notifications/application/gnome-control-center]
+application-id='gnome-control-center.desktop'
+
+[org/gnome/desktop/notifications/application/gnome-power-panel]
+application-id='gnome-power-panel.desktop'
+
+[org/gnome/desktop/notifications/application/io-github-celluloid-player-celluloid]
+application-id='io.github.celluloid_player.Celluloid.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-nautilus]
+application-id='org.gnome.Nautilus.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-software]
+application-id='org.gnome.Software.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-terminal]
+application-id='org.gnome.Terminal.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-totem]
+application-id='org.gnome.Totem.desktop'
+
+[org/gnome/desktop/notifications/application/org-qbittorrent-qbittorrent]
+application-id='org.qbittorrent.qBittorrent.desktop'
+
+[org/gnome/desktop/notifications/application/synaptic]
+application-id='synaptic.desktop'
+
+[org/gnome/desktop/notifications/application/update-manager]
+application-id='update-manager.desktop'
+
+[org/gnome/desktop/notifications/application/vlc]
+application-id='vlc.desktop'
+
+[org/gnome/desktop/notifications/application/xdg-desktop-portal-gnome]
+application-id='xdg-desktop-portal-gnome.desktop'
+
+[org/gnome/desktop/peripherals/keyboard]
+numlock-state=true
+
+[org/gnome/desktop/peripherals/touchpad]
+two-finger-scrolling-enabled=true
+
+[org/gnome/desktop/privacy]
+report-technical-problems=true
+
+[org/gnome/desktop/search-providers]
+sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop']
+
+[org/gnome/desktop/wm/preferences]
+titlebar-font='Ubuntu 10'
+
+[org/gnome/evolution-data-server]
+migrated=true
+network-monitor-gio-name=''
+
+[org/gnome/gedit/plugins]
+active-plugins=['modelines', 'sort', 'filebrowser', 'openlinks', 'docinfo', 'spell']
+
+[org/gnome/gedit/plugins/filebrowser]
+root='file:///'
+tree-view=true
+virtual-root='file:///home/sarobidy'
+
+[org/gnome/gedit/preferences/editor]
+scheme='tango'
+tabs-size=uint32 4
+wrap-last-split-mode='word'
+
+[org/gnome/gedit/preferences/ui]
+show-tabs-mode='auto'
+
+[org/gnome/gedit/state/window]
+bottom-panel-size=140
+side-panel-active-page='GeditWindowDocumentsPanel'
+side-panel-size=200
+size=(768, 388)
+state=87168
+
+[org/gnome/nautilus/compression]
+default-compression-format='zip'
+
+[org/gnome/nautilus/preferences]
+default-folder-viewer='icon-view'
+search-filter-time-type='last_modified'
+search-view='list-view'
+
+[org/gnome/nautilus/window-state]
+initial-size=(890, 550)
+maximized=false
+sidebar-width=256
+
+[org/gnome/settings-daemon/plugins/power]
+sleep-inactive-ac-timeout=3600
+sleep-inactive-ac-type='nothing'
+
+[org/gnome/shell]
+disable-user-extensions=false
+disabled-extensions=['auto-move-windows@gnome-shell-extensions.gcampax.github.com']
+enabled-extensions=['apps-menu@gnome-shell-extensions.gcampax.github.com', 'ding@rastersoft.com', 'ubuntu-dock@ubuntu.com', 'ubuntu-appindicators@ubuntu.com']
+favorite-apps=['org.gnome.Nautilus.desktop', 'libreoffice-writer.desktop', 'snap-store_ubuntu-software.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.gedit.desktop', 'code.desktop', 'audacious.desktop', 'xdman.desktop', 'io.github.mrvladus.List.desktop', 'io.bassi.Amberol.desktop', 'com.github.unrud.VideoDownloader.desktop', 'firefox.desktop', 'org.qbittorrent.qBittorrent.desktop', 'com.warlordsoftwares.youtube-downloader-4ktube.desktop']
+welcome-dialog-last-shown-version='42.9'
+
+[org/gnome/shell/extensions/dash-to-dock]
+dash-max-icon-size=24
+dock-position='LEFT'
+extend-height=false
+preferred-monitor=-2
+preferred-monitor-by-connector='eDP-1'
+show-mounts=false
+show-mounts-network=false
+show-mounts-only-mounted=true
+
+[org/gnome/shell/extensions/ding]
+icon-size='small'
+show-home=false
+start-corner='top-left'
+
+[org/gnome/shell/extensions/user-theme]
+name='Yaru-sage'
+
+[org/gnome/software]
+check-timestamp=int64 1718683192
+online-updates-timestamp=int64 1718683197
+update-notification-timestamp=int64 1718683197
+
+[org/gnome/system/location]
+enabled=false
+
+[org/gtk/gtk4/settings/file-chooser]
+date-format='regular'
+location-mode='path-bar'
+show-hidden=false
+show-size-column=true
+show-type-column=true
+sidebar-width=213
+sort-column='name'
+sort-directories-first=false
+sort-order='ascending'
+type-format='category'
+window-size=(1018, 327)
+
+[org/gtk/settings/file-chooser]
+date-format='regular'
+location-mode='path-bar'
+show-hidden=false
+show-size-column=true
+show-type-column=true
+sidebar-width=201
+sort-column='name'
+sort-directories-first=true
+sort-order='ascending'
+type-format='category'
+window-position=(26, 23)
+window-size=(1203, 694)

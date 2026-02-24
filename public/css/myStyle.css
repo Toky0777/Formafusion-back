@@ -1,0 +1,23 @@
+.serialtip-custom {
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 5px 5px 35px 5px rgba(0, 0, 0, .1);
+  font-size: 14px;
+  color: #666;
+}
+
+.serialtip-custom:before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: solid transparent;
+}
+
+.serialtip-custom.is-placement-bottom:before {
+  bottom: 100%;
+  left: 50%;
+  margin-left: -6px;
+  border-width: 0 6px 6px 6px;
+  border-bottom-color: #fff;
+}

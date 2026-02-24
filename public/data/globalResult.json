@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "nom": "Quiz de Gestion Financière",
+    "candidat": 17,
+    "valide": 6,
+    "echoue": 11,
+    "duree": "50 min",
+    "total": 40,
+    "obtenu": 35
+  },
+  {
+    "id": 2,
+    "nom": "Test de Mathématiques",
+    "candidat": 15,
+    "valide": 4,
+    "echoue": 11,
+    "duree": "45 min",
+    "total": 42,
+    "obtenu": 20
+  },
+  {
+    "id": 3,
+    "nom": "Quiz de Langues Étrangères",
+    "candidat": 20,
+    "valide": 7,
+    "echoue": 13,
+    "duree": "60 min",
+    "total": 37,
+    "obtenu": 4
+  },
+  {
+    "id": 4,
+    "nom": "Test de Sciences Sociales",
+    "candidat": 14,
+    "valide": 5,
+    "echoue": 9,
+    "duree": "55 min",
+    "total": 38,
+    "obtenu": 18
+  },
+  {
+    "id": 5,
+    "nom": "Quiz de Physique",
+    "candidat": 18,
+    "valide": 6,
+    "echoue": 12,
+    "duree": "50 min",
+    "total": 44,
+    "obtenu": 22
+  },
+  {
+    "id": 6,
+    "nom": "Test de Chimie",
+    "candidat": 16,
+    "valide": 4,
+    "echoue": 12,
+    "duree": "45 min",
+    "total": 46,
+    "obtenu": 7
+  },
+  {
+    "id": 7,
+    "nom": "Quiz de Biologie",
+    "candidat": 19,
+    "valide": 8,
+    "echoue": 11,
+    "duree": "55 min",
+    "total": 45,
+    "obtenu": 2
+  },
+  {
+    "id": 8,
+    "nom": "Test de Programmation",
+    "candidat": 17,
+    "valide": 5,
+    "echoue": 12,
+    "duree": "50 min",
+    "total": 47,
+    "obtenu": 1
+  },
+  {
+    "id": 9,
+    "nom": "Quiz de Géographie",
+    "candidat": 15,
+    "valide": 7,
+    "echoue": 8,
+    "duree": "45 min",
+    "total": 43,
+    "obtenu": 21
+  },
+  {
+    "id": 10,
+    "nom": "Test de Histoire",
+    "candidat": 20,
+    "valide": 9,
+    "echoue": 11,
+    "duree": "60 min",
+    "total": 50,
+    "obtenu": 23
+  }
+]

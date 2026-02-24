@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "grade": "Novice"
+  },
+  {
+    "id": 2,
+    "grade": "Débutant"
+  },
+  {
+    "id": 3,
+    "grade": "Initié"
+  },
+  {
+    "id": 4,
+    "grade": "Intermédiaire"
+  },
+  {
+    "id": 5,
+    "grade": "Avancé"
+  },
+  {
+    "id": 6,
+    "grade": "Confirmé"
+  },
+  {
+    "id": 7,
+    "grade": "Professionnel"
+  },
+  {
+    "id": 8,
+    "grade": "Expert"
+  },
+  {
+    "id": 9,
+    "grade": "Maître"
+  },
+  {
+    "id": 10,
+    "grade": "Élite"
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "ville": "Antananarivo"
+  },
+  {
+    "id": 2,
+    "ville": "Toamasina"
+  },
+  {
+    "id": 3,
+    "ville": "Antsirabe"
+  },
+  {
+    "id": 4,
+    "ville": "Fianarantsoa"
+  },
+  {
+    "id": 5,
+    "ville": "Mahajanga"
+  },
+  {
+    "id": 6,
+    "ville": "Toliara"
+  },
+  {
+    "id": 7,
+    "ville": "Antsiranana"
+  },
+  {
+    "id": 8,
+    "ville": "Morondava"
+  }
+]

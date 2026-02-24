@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "fournisseur": "Cotisse",
+    "service": "Transport"
+  },
+  {
+    "id": 2,
+    "fournisseur": "Tsiro Naka",
+    "service": "Restauration"
+  },
+  {
+    "id": 3,
+    "fournisseur": "Suprem Center",
+    "service": "Matériel Informatique"
+  },
+  {
+    "id": 4,
+    "fournisseur": "Soatrans",
+    "service": "Transport"
+  },
+  {
+    "id": 5,
+    "fournisseur": "Avance Center",
+    "service": "Vêtement"
+  }
+]

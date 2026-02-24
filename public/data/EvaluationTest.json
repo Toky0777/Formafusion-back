@@ -1,0 +1,37 @@
+[
+  {
+    "theme": "Contenu de la formation",
+    "question": [
+      "Contenu conforme aux objectifs",
+      "Contenu conforme aux attentes",
+      "Rapport Théorie/Pratique",
+      "Durée",
+      "Rythme",
+      "Support pédagogiques",
+      "Logistique et conditions matérielles"
+    ]
+  },
+  {
+    "theme": "Formateur(s)",
+    "question": [
+      "Clarté du cours/ des explications",
+      "Maîtrise du sujet par le(s) formateur(s)",
+      "Disponibilité",
+      "Méthode pédagogique",
+      "Intérêt des exercices pratiques"
+    ]
+  },
+  {
+    "theme": "Impact",
+    "question": [
+      "Utilité en situation de travail",
+      "Amélioration du développement personnel/ professionnel"
+    ]
+  },
+  {
+    "theme": "En général",
+    "question": [
+      "APPRECIATION GENERALE DE LA FORMATION"
+    ]
+  }
+]

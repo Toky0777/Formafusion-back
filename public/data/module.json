@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "libelle": "Les Fondamentaux"
+  },
+  {
+    "id": 2,
+    "libelle": "Programmation en Python"
+  },
+  {
+    "id": 3,
+    "libelle": "Introduction à la statistique"
+  },
+  {
+    "id": 4,
+    "libelle": "Bases de données SQL"
+  },
+  {
+    "id": 5,
+    "libelle": "Conception de sites web"
+  },
+  {
+    "id": 6,
+    "libelle": "Gestion de projet"
+  },
+  {
+    "id": 7,
+    "libelle": "Intelligence artificielle"
+  },
+  {
+    "id": 8,
+    "libelle": "Marketing digital"
+  },
+  {
+    "id": 9,
+    "libelle": "Économie mondiale"
+  },
+  {
+    "id": 10,
+    "libelle": "Méthodes de recherche scientifique"
+  },
+  {
+    "id": 11,
+    "libelle": "Physique quantique"
+  },
+  {
+    "id": 12,
+    "libelle": "Géologie et minéralogie"
+  },
+  {
+    "id": 13,
+    "libelle": "Langues étrangères"
+  },
+  {
+    "id": 14,
+    "libelle": "Sociologie moderne"
+  },
+  {
+    "id": 15,
+    "libelle": "Philosophie de l'éthique"
+  },
+  {
+    "id": 16,
+    "libelle": "Théorie de la musique"
+  },
+  {
+    "id": 17,
+    "libelle": "Droit des affaires"
+  },
+  {
+    "id": 18,
+    "libelle": "Psychologie cognitive"
+  },
+  {
+    "id": 19,
+    "libelle": "Architecture contemporaine"
+  },
+  {
+    "id": 20,
+    "libelle": "Art moderne et contemporain"
+  }
+]

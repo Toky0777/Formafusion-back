@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "fonction": "Formateur"
+  },
+  {
+    "id": 2,
+    "fonction": "Directeur"
+  },
+  {
+    "id": 3,
+    "fonction": "Ingénieur logiciel"
+  },
+  {
+    "id": 4,
+    "fonction": "Designer graphique"
+  },
+  {
+    "id": 5,
+    "fonction": "Analyste financier"
+  },
+  {
+    "id": 6,
+    "fonction": "Chef de projet"
+  },
+  {
+    "id": 7,
+    "fonction": "Développeur web"
+  },
+  {
+    "id": 8,
+    "fonction": "Spécialiste en marketing"
+  },
+  {
+    "id": 9,
+    "fonction": "Infirmière"
+  },
+  {
+    "id": 10,
+    "fonction": "Consultant en gestion"
+  }
+]

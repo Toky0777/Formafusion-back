@@ -1,0 +1,170 @@
+[
+  {
+    "id": 0,
+    "domaine": "Tous les domaines"
+  },
+  {
+    "id": 1,
+    "domaine": "Achats"
+  },
+  {
+    "id": 2,
+    "domaine": "Assistant(e)"
+  },
+  {
+    "id": 3,
+    "domaine": "Audit - Organisation - Conseil"
+  },
+  {
+    "id": 4,
+    "domaine": "Banque"
+  },
+  {
+    "id": 5,
+    "domaine": "Bureautique - PAO/CAO"
+  },
+  {
+    "id": 6,
+    "domaine": "Coaching"
+  },
+  {
+    "id": 7,
+    "domaine": "Commercial - Ventes"
+  },
+  {
+    "id": 8,
+    "domaine": "Communication"
+  },
+  {
+    "id": 9,
+    "domaine": "Comptabilité - Fiscalité"
+  },
+  {
+    "id": 10,
+    "domaine": "Conduite du changement"
+  },
+  {
+    "id": 11,
+    "domaine": "Contrôle de gestion"
+  },
+  {
+    "id": 12,
+    "domaine": "Création d’entreprise"
+  },
+  {
+    "id": 13,
+    "domaine": "Digital"
+  },
+  {
+    "id": 14,
+    "domaine": "Direction"
+  },
+  {
+    "id": 15,
+    "domaine": "Droit"
+  },
+  {
+    "id": 16,
+    "domaine": "Droit des affaires"
+  },
+  {
+    "id": 17,
+    "domaine": "Développement personnel"
+  },
+  {
+    "id": 18,
+    "domaine": "Efficacité professionnelle"
+  },
+  {
+    "id": 19,
+    "domaine": "Finance - Trésorerie"
+  },
+  {
+    "id": 20,
+    "domaine": "Formation"
+  },
+  {
+    "id": 21,
+    "domaine": "Formations OPCOMMERCE"
+  },
+  {
+    "id": 22,
+    "domaine": "Gestion du temps"
+  },
+  {
+    "id": 23,
+    "domaine": "Immo"
+  },
+  {
+    "id": 24,
+    "domaine": "Informatique"
+  },
+  {
+    "id": 25,
+    "domaine": "Innovation"
+  },
+  {
+    "id": 26,
+    "domaine": "International"
+  },
+  {
+    "id": 27,
+    "domaine": "Logistique"
+  },
+  {
+    "id": 28,
+    "domaine": "Management et leadership"
+  },
+  {
+    "id": 29,
+    "domaine": "Marketing - Marketing digital"
+  },
+  {
+    "id": 30,
+    "domaine": "Paie/Admin."
+  },
+  {
+    "id": 31,
+    "domaine": "Production - Lean"
+  },
+  {
+    "id": 32,
+    "domaine": "Projet"
+  },
+  {
+    "id": 33,
+    "domaine": "QSE"
+  },
+  {
+    "id": 34,
+    "domaine": "QVT"
+  },
+  {
+    "id": 35,
+    "domaine": "RSE"
+  },
+  {
+    "id": 36,
+    "domaine": "Relation client"
+  },
+  {
+    "id": 37,
+    "domaine": "Ressources humaines"
+  },
+  {
+    "id": 38,
+    "domaine": "Secteur public"
+  },
+  {
+    "id": 39,
+    "domaine": "Soft skills"
+  },
+  {
+    "id": 40,
+    "domaine": "Travail à distance"
+  },
+  {
+    "id": 41,
+    "domaine": "Web"
+  }
+]

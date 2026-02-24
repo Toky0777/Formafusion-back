@@ -1,0 +1,90 @@
+const dp = new DayPilot.Scheduler("dp", {
+  startDate: "2025-01-01",
+  days: 365,
+  scale: "Day",
+  timeHeaders: [
+      {groupBy: "Month", format: "MMMM yyyy"},
+      {groupBy: "Cell", format: "d"}
+  ],
+  treeEnabled: true,
+  onTimeRangeSelected: async (args) => {
+      const modal = await DayPilot.Modal.prompt("New event name:", "Event");
+      dp.clearSelection();
+      if (modal.canceled) {
+          return;
+      }
+      dp.events.add({
+          start: args.start,
+          end: args.end,
+          id: DayPilot.guid(),
+          resource: args.resource,
+          text: name
+      });
+      dp.message("Created");
+  },
+  onEventFilter: (args) => {
+      const textFound = args.e.text().toUpperCase().indexOf(args.filter.toUpperCase()) > -1;
+
+      if (!textFound) {
+          args.visible = false;
+      }
+  },
+  height: 300
+});
+dp.init();
+dp.scrollTo("2025-10-25");
+
+const app = {
+  elements: {
+      filter: document.querySelector("#filter"),
+      clear: document.querySelector("#clear"),
+  },
+  loadData() {
+      const resources = [
+          {name: "Room A", id: "A"},
+          {name: "Room B", id: "B"},
+          {name: "Room C", id: "C"},
+          {name: "Room D", id: "D"},
+          {name: "Room E", id: "E"},
+          {name: "Room F", id: "F"},
+          {name: "Room G", id: "G"},
+          {name: "Room H", id: "H"},
+          {name: "Room I", id: "I"},
+          {name: "Room J", id: "J"},
+          {name: "Room K", id: "K"}
+      ];
+      const events = [];
+      for (let i = 0; i < 15; i++) {
+          const duration = Math.floor(Math.random() * 6) + 1; // 1 to 6
+          const durationDays = Math.floor(Math.random() * 6 + 2); // 2 to 7
+          const start = Math.floor(Math.random() * 6) + 2; // 2 to 7
+          const res = Math.floor(Math.random() * 6); // 0 to 5
+
+          const e = {
+              start: new DayPilot.Date("2025-10-25T00:00:00").addDays(start),
+              end: new DayPilot.Date("2025-10-25T12:00:00").addDays(start).addDays(durationDays).addHours(duration),
+              id: DayPilot.guid(),
+              resource: String.fromCharCode(65 + i),
+              text: `Event ${i + 1}`
+          };
+
+          events.push(e);
+      }
+
+      dp.update({resources, events});
+  },
+  init() {
+      this.elements.filter.addEventListener("keyup", function () {
+          var query = this.value;
+          dp.events.filter(query); // see dp.onEventFilter
+      });
+
+      this.elements.clear.addEventListener("click", function (ev) {
+          ev.preventDefault();
+          app.elements.filter.value = "";
+          dp.events.filter(null);
+      });
+      this.loadData();
+  }
+};
+app.init();

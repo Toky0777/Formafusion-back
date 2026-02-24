@@ -1,0 +1,48 @@
+[
+  {
+    "theme": "Aspect de la formation",
+    "noteGlobal": 4.3,
+    "question": [
+      {
+        "itemQuestion": "Pensez-vous avoir atteint les objectifs que vous vous étiez fixés en début de formation ?",
+        "note": 2,
+        "score1": "80",
+        "pers1": "8",
+        "score2": "50",
+        "pers2": "8",
+        "score3": "40",
+        "pers3": "8"
+      },
+      {
+        "itemQuestion": "Depuis la fin de votre formation, avez-vous pu mettre en pratique les connaissances acquises ?",
+        "note": 1.2,
+        "score1": "80",
+        "pers1": "8",
+        "score2": "50",
+        "pers2": "8",
+        "score3": "40",
+        "pers3": "8"
+      },
+      {
+        "itemQuestion": "Diriez-vous que la formation vous a permis d'évoluer ?",
+        "note": 5,
+        "score1": "80",
+        "pers1": "8",
+        "score2": "50",
+        "pers2": "8",
+        "score3": "40",
+        "pers3": "8"
+      },
+      {
+        "itemQuestion": "Recommanderiez-vous cette formation à l'un de vos collègues ?",
+        "note": 2.2,
+        "score1": "80",
+        "pers1": "8",
+        "score2": "50",
+        "pers2": "8",
+        "score3": "40",
+        "pers3": "8"
+      }
+    ]
+  }
+]

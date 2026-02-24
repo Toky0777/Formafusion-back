@@ -1,0 +1,240 @@
+[
+  {
+    "theme": "Contenu de la formation",
+    "noteGlobal": 1.2,
+    "scoreGlobal": "30",
+    "question": [
+      {
+        "itemQuestion": "Contenu conforme aux objectif",
+        "note": 2,
+        "score1": "80",
+        "pers1": "8",
+        "score2": "50",
+        "pers2": "8",
+        "score3": "40",
+        "pers3": "8",
+        "score4": "20",
+        "pers4": "8",
+        "score5": "10",
+        "pers5": "8"
+      },
+      {
+        "itemQuestion": "Contenu conforme à vos attentes",
+        "note": 1.2,
+        "score1": "80",
+        "pers1": "8",
+        "score2": "50",
+        "pers2": "8",
+        "score3": "40",
+        "pers3": "8",
+        "score4": "20",
+        "pers4": "8",
+        "score5": "10",
+        "pers5": "8"
+      },
+      {
+        "itemQuestion": "Rapport théorie/pratique",
+        "note": 5,
+        "score1": "80",
+        "pers1": "8",
+        "score2": "50",
+        "pers2": "8",
+        "score3": "40",
+        "pers3": "8",
+        "score4": "20",
+        "pers4": "8",
+        "score5": "10",
+        "pers5": "8"
+      },
+      {
+        "itemQuestion": "Durée",
+        "note": 2.2,
+        "score1": "80",
+        "pers1": "8",
+        "score2": "50",
+        "pers2": "8",
+        "score3": "40",
+        "pers3": "8",
+        "score4": "20",
+        "pers4": "8",
+        "score5": "10",
+        "pers5": "8"
+      },
+      {
+        "itemQuestion": "Rythme",
+        "note": 1.2,
+        "score1": "80",
+        "pers1": "8",
+        "score2": "50",
+        "pers2": "8",
+        "score3": "40",
+        "pers3": "8",
+        "score4": "20",
+        "pers4": "8",
+        "score5": "10",
+        "pers5": "8"
+      },
+      {
+        "itemQuestion": "Support pédagogique",
+        "note": 1.7,
+        "score1": "80",
+        "pers1": "8",
+        "score2": "50",
+        "pers2": "8",
+        "score3": "40",
+        "pers3": "8",
+        "score4": "20",
+        "pers4": "8",
+        "score5": "10",
+        "pers5": "8"
+      },
+      {
+        "itemQuestion": "Logistique et conditions matérielles",
+        "note": 3.2,
+        "score1": "80",
+        "pers1": "8",
+        "score2": "50",
+        "pers2": "8",
+        "score3": "40",
+        "pers3": "8",
+        "score4": "20",
+        "pers4": "8",
+        "score5": "10",
+        "pers5": "8"
+      }
+    ]
+  },
+  {
+    "theme": "Formateur(s)",
+    "noteGlobal": 4.2,
+    "scoreGlobal": "80",
+    "question": [
+      {
+        "itemQuestion": "Clarté du cours/ des explications",
+        "note": 3.2,
+        "score1": "80",
+        "pers1": "8",
+        "score2": "50",
+        "pers2": "8",
+        "score3": "40",
+        "pers3": "8",
+        "score4": "20",
+        "pers4": "8",
+        "score5": "10",
+        "pers5": "8"
+      },
+      {
+        "itemQuestion": "Maîtrise du sujet par le(s) formateur(s)",
+        "note": 4.2,
+        "score1": "80",
+        "pers1": "8",
+        "score2": "50",
+        "pers2": "8",
+        "score3": "40",
+        "pers3": "8",
+        "score4": "20",
+        "pers4": "8",
+        "score5": "10",
+        "pers5": "8"
+      },
+      {
+        "itemQuestion": "Disponibilité",
+        "note": 5,
+        "score1": "80",
+        "pers1": "8",
+        "score2": "50",
+        "pers2": "8",
+        "score3": "40",
+        "pers3": "8",
+        "score4": "20",
+        "pers4": "8",
+        "score5": "10",
+        "pers5": "8"
+      },
+      {
+        "itemQuestion": "Méthode pédagogique",
+        "note": 2,
+        "score1": "80",
+        "pers1": "8",
+        "score2": "50",
+        "pers2": "8",
+        "score3": "40",
+        "pers3": "8",
+        "score4": "20",
+        "pers4": "8",
+        "score5": "10",
+        "pers5": "8"
+      },
+      {
+        "itemQuestion": "Intérêt des exercices pratiques",
+        "note": 2.3,
+        "score1": "80",
+        "pers1": "8",
+        "score2": "50",
+        "pers2": "8",
+        "score3": "40",
+        "pers3": "8",
+        "score4": "20",
+        "pers4": "8",
+        "score5": "10",
+        "pers5": "8"
+      }
+    ]
+  },
+  {
+    "theme": "Impact",
+    "noteGlobal": 3.4,
+    "scoreGlobal": "80",
+    "question": [
+      {
+        "itemQuestion": "Utilité en situation de travail",
+        "note": 4.2,
+        "score1": "80",
+        "pers1": "8",
+        "score2": "50",
+        "pers2": "8",
+        "score3": "40",
+        "pers3": "8",
+        "score4": "20",
+        "pers4": "8",
+        "score5": "10",
+        "pers5": "8"
+      },
+      {
+        "itemQuestion": "Amélioration du développement personnel/professionnel",
+        "note": 4,
+        "score1": "80",
+        "pers1": "8",
+        "score2": "50",
+        "pers2": "8",
+        "score3": "40",
+        "pers3": "8",
+        "score4": "20",
+        "pers4": "8",
+        "score5": "10",
+        "pers5": "8"
+      }
+    ]
+  },
+  {
+    "theme": "En général",
+    "noteGlobal": 4.8,
+    "scoreGlobal": "91",
+    "question": [
+      {
+        "itemQuestion": "APPRECIATION GENERALE DE LA FORMATION",
+        "note": 4.7,
+        "score1": "80",
+        "pers1": "8",
+        "score2": "50",
+        "pers2": "8",
+        "score3": "40",
+        "pers3": "8",
+        "score4": "20",
+        "pers4": "8",
+        "score5": "10",
+        "pers5": "8"
+      }
+    ]
+  }
+]

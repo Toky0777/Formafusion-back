@@ -1,0 +1,350 @@
+[
+  {
+    "id": 1,
+    "theme": "Science",
+    "niveau": "Facile",
+    "question": "Quelles sont les trois lois du mouvement de Newton ?",
+    "reponse": [
+      {
+        "key": 1,
+        "value": "La loi de l'inertie : Un objet en mouvement reste en mouvement et un objet au repos reste au repos, à moins qu'une force nette ne soit appliquée."
+      },
+      {
+        "key": 2,
+        "value": "La loi fondamentale de la dynamique : La force est égale à la masse multipliée par l'accélération (F = ma)."
+      },
+      {
+        "key": 3,
+        "value": "La loi de l'action-réaction : Pour chaque action, il y a une réaction égale et opposée."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "theme": "Géographie",
+    "niveau": "Moyen",
+    "question": "Quels sont les cinq continents de la Terre ?",
+    "reponse": [
+      {
+        "key": 4,
+        "value": "L'Asie"
+      },
+      {
+        "key": 5,
+        "value": "L'Afrique"
+      },
+      {
+        "key": 6,
+        "value": "L'Amérique du Nord"
+      },
+      {
+        "key": 7,
+        "value": "L'Amérique du Sud"
+      },
+      {
+        "key": 8,
+        "value": "L'Europe"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "theme": "Cuisine",
+    "niveau": "Difficile",
+    "question": "Quels sont les ingrédients principaux d'une pizza margherita ?",
+    "reponse": [
+      {
+        "key": 9,
+        "value": "Pâte à pizza"
+      },
+      {
+        "key": 10,
+        "value": "Sauce tomate"
+      },
+      {
+        "key": 11,
+        "value": "Mozzarella"
+      },
+      {
+        "key": 12,
+        "value": "Basilic frais"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "theme": "Histoire",
+    "niveau": "Très difficile",
+    "question": "Quelle est la date de la Déclaration d'indépendance des États-Unis ?",
+    "reponse": [
+      {
+        "key": 13,
+        "value": "4 juillet 1776"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "theme": "Mathématiques",
+    "niveau": "Très facile",
+    "question": "Qu'est-ce que le théorème de Pythagore ?",
+    "reponse": [
+      {
+        "key": 14,
+        "value": "Le théorème de Pythagore énonce que dans un triangle rectangle, le carré de la longueur de l'hypoténuse (le côté opposé à l'angle droit) est égal à la somme des carrés des longueurs des deux autres côtés."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "theme": "Informatique",
+    "niveau": "Moyen",
+    "question": "Qu'est-ce qu'un algorithme de tri ?",
+    "reponse": [
+      {
+        "key": 15,
+        "value": "Un algorithme de tri est un ensemble d'instructions utilisé pour réorganiser une liste ou un tableau d'éléments dans un ordre spécifique, tel que croissant ou décroissant, en utilisant une méthode particulière."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "theme": "Musique",
+    "niveau": "Facile",
+    "question": "Quels sont les trois principaux types d'instruments de musique ?",
+    "reponse": [
+      {
+        "key": 16,
+        "value": "Instruments à vent"
+      },
+      {
+        "key": 17,
+        "value": "Instruments à cordes"
+      },
+      {
+        "key": 18,
+        "value": "Instruments à percussion"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "theme": "Langues",
+    "niveau": "Facile",
+    "question": "Citez trois langues romanes.",
+    "reponse": [
+      {
+        "key": 19,
+        "value": "Français"
+      },
+      {
+        "key": 20,
+        "value": "Espagnol"
+      },
+      {
+        "key": 21,
+        "value": "Italien"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "theme": "Sport",
+    "niveau": "Difficile",
+    "question": "Quels sont les trois sports les plus populaires au monde ?",
+    "reponse": [
+      {
+        "key": 22,
+        "value": "Football (soccer)"
+      },
+      {
+        "key": 23,
+        "value": "Cricket"
+      },
+      {
+        "key": 24,
+        "value": "Tennis"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "theme": "Économie",
+    "niveau": "Moyen",
+    "question": "Quelles sont les trois principales branches de l'économie ?",
+    "reponse": [
+      {
+        "key": 25,
+        "value": "Macroéconomie"
+      },
+      {
+        "key": 26,
+        "value": "Microéconomie"
+      },
+      {
+        "key": 27,
+        "value": "Économie internationale"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "theme": "Astronomie",
+    "niveau": "Moyen",
+    "question": "Quels sont les trois types de galaxies les plus courants dans l'univers ?",
+    "reponse": [
+      {
+        "key": 28,
+        "value": "Galaxies spirales"
+      },
+      {
+        "key": 29,
+        "value": "Galaxies elliptiques"
+      },
+      {
+        "key": 30,
+        "value": "Galaxies irrégulières"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "theme": "Littérature",
+    "niveau": "Très difficile",
+    "question": "Citez trois œuvres célèbres de William Shakespeare.",
+    "reponse": [
+      {
+        "key": 31,
+        "value": "Roméo et Juliette"
+      },
+      {
+        "key": 32,
+        "value": "Hamlet"
+      },
+      {
+        "key": 33,
+        "value": "Macbeth"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "theme": "Politique",
+    "niveau": "Facile",
+    "question": "Quels sont les trois pouvoirs de l'État selon la théorie de la séparation des pouvoirs ?",
+    "reponse": [
+      {
+        "key": 34,
+        "value": "Pouvoir législatif"
+      },
+      {
+        "key": 35,
+        "value": "Pouvoir exécutif"
+      },
+      {
+        "key": 36,
+        "value": "Pouvoir judiciaire"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "theme": "Technologie",
+    "niveau": "Facile",
+    "question": "Quels sont les trois principaux systèmes d'exploitation pour ordinateurs personnels ?",
+    "reponse": [
+      {
+        "key": 37,
+        "value": "Windows"
+      },
+      {
+        "key": 38,
+        "value": "macOS"
+      },
+      {
+        "key": 39,
+        "value": "Linux"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "theme": "Psychologie",
+    "niveau": "Très facile",
+    "question": "Quels sont les trois types de mémoire humaine ?",
+    "reponse": [
+      {
+        "key": 40,
+        "value": "Mémoire sensorielle"
+      },
+      {
+        "key": 41,
+        "value": "Mémoire à court terme"
+      },
+      {
+        "key": 42,
+        "value": "Mémoire à long terme"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "theme": "Art",
+    "niveau": "Très difficile",
+    "question": "Citez trois mouvements artistiques du XXe siècle.",
+    "reponse": [
+      {
+        "key": 43,
+        "value": "Surréalisme"
+      },
+      {
+        "key": 44,
+        "value": "Cubisme"
+      },
+      {
+        "key": 45,
+        "value": "Pop art"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "theme": "Santé",
+    "niveau": "Moyen",
+    "question": "Quels sont les trois types de macronutriments essentiels pour le corps humain ?",
+    "reponse": [
+      {
+        "key": 46,
+        "value": "Glucides"
+      },
+      {
+        "key": 47,
+        "value": "Protéines"
+      },
+      {
+        "key": 48,
+        "value": "Lipides"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "theme": "Environnement",
+    "niveau": "Moyen",
+    "question": "Quels sont les trois principaux gaz à effet de serre responsables du changement climatique ?",
+    "reponse": [
+      {
+        "key": 49,
+        "value": "Dioxyde de carbone (CO2)"
+      },
+      {
+        "key": 50,
+        "value": "Méthane (CH4)"
+      },
+      {
+        "key": 51,
+        "value": "Protoxyde d'azote (N2O)"
+      }
+    ]
+  }
+]

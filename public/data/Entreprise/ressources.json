@@ -1,0 +1,30 @@
+[
+  {
+    "idSrc": 1,
+    "materiel": "Vidéo projecteur",
+    "nombre": 2,
+    "demande": "",
+    "charge": "Centre de formation"
+  },
+  {
+    "idSrc": 2,
+    "materiel": "Souris",
+    "nombre": 5,
+    "demande": "",
+    "charge": "Entreprise"
+  },
+  {
+    "idSrc": 3,
+    "materiel": "Ecran",
+    "nombre": 6,
+    "demande": "",
+    "charge": "Centre de formation"
+  },
+  {
+    "idSrc": 4,
+    "materiel": "Grande Salle",
+    "nombre": 1,
+    "demande": "",
+    "charge": "Centre de formation"
+  }
+]

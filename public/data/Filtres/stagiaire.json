@@ -1,0 +1,42 @@
+[
+    {
+      "id": 1,
+      "stagiaire": "John Smith"
+    },
+    {
+      "id": 2,
+      "stagiaire": "Sandra Gomez"
+    },
+    {
+      "id": 3,
+      "stagiaire": "Michael Johnson"
+    },
+    {
+      "id": 4,
+      "stagiaire": "Emily Davis"
+    },
+    {
+      "id": 5,
+      "stagiaire": "Daniel Brown"
+    },
+    {
+      "id": 6,
+      "stagiaire": "Sophia Martinez"
+    },
+    {
+      "id": 7,
+      "stagiaire": "William Wilson"
+    },
+    {
+      "id": 8,
+      "stagiaire": "Olivia Taylor"
+    },
+    {
+      "id": 9,
+      "stagiaire": "James Anderson"
+    },
+    {
+      "id": 10,
+      "stagiaire": "Ava Hernandez"
+    }
+  ]

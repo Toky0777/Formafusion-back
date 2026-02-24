@@ -1,0 +1,348 @@
+* {
+    font-size: 12px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* 403 */
+.forbidden {
+    text-align: center;
+    font-size: 16px;
+    /* color: #fff; */
+}
+
+#myUl li {
+    margin: 10px 20px;
+}
+
+#myUl li i {
+    font-size: 24px;
+    margin-right: 5px;
+    color: #637381;
+}
+
+#myUl li a,
+.bi-trash,
+.bi-pencil-square,
+.bi-arrow-left-short {
+    text-decoration: none;
+    color: #637381;
+}
+
+.bi-arrow-left-short {
+    padding: 4px 8px;
+}
+
+.iconMdlFoot {
+    font-size: 22px;
+    /* padding: 6px 8px; */
+}
+
+.iconMdlFoot:hover {
+    background: #63738117;
+    border-radius: 50%;
+}
+
+.bi-arrow-left-short:hover,
+.bi-pencil-square:hover,
+.bi-trash:hover {
+    background: #63738117;
+    border-radius: 50%;
+}
+
+.logoForm {
+    width: 30px;
+}
+
+.bi-gear,
+.bi-plus-circle {
+    font-size: 18px;
+    color: #637381;
+    margin-right: 20px;
+}
+
+.divDrop {
+    width: 200px;
+}
+
+.abnLi {
+    list-style: none;
+    text-decoration: none;
+    padding: 5px 10px 5px 2px;
+}
+
+.abnLi a {
+    text-decoration: none;
+    color: #637381;
+}
+
+.bi-gem,
+.bi-receipt,
+.bi-bank,
+.bi-journal-bookmark,
+.bi-card-checklist,
+.bi-people-fill,
+.buil,
+.subProj,
+.bi-door-open,
+.bi-briefcase,
+.bi-person-square,
+.bi-envelope-at,
+.bi-calendar-x {
+    font-size: 15px;
+    padding-right: 5px;
+}
+
+.btnAdd {
+    font-size: 20px;
+    padding-right: 5px;
+    color: #637381;
+}
+
+.bi-arrow-left-short {
+    font-size: 30px;
+}
+
+.bi-pencil-square,
+.bi-trash {
+    font-size: 18px;
+}
+
+/* AgendasCfps */
+#calendar {
+    height: 65%;
+}
+
+.btnAction {
+    width: 100px;
+}
+
+.circleFill {
+    color: green;
+}
+
+.iconSide {
+    font-size: 20px;
+    color: #637381;
+}
+
+.addApprenant,
+.storeApprenant {
+    font-size: 20px;
+}
+
+#myTab .nav-link {
+    text-decoration: none;
+    color: #637381;
+}
+
+.notif {
+    font-weight: 700;
+}
+
+.textDft,
+.textPp,
+.textAa,
+.textRr,
+.textEe,
+.textEmge,
+.textTt {
+    font-weight: 700;
+}
+
+.moduleTitle {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    color: #278DDB;
+}
+
+.iconTime {
+    font-size: 15px;
+}
+
+.iconTag {
+    font-size: 18px;
+}
+
+#offcanvasTopLabel {
+    border-bottom: 4px solid #637381;
+    width: 80%;
+}
+
+.emgCheck,
+.emgAbs {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.emgCheck {
+    color: green;
+}
+
+.emgAbs {
+    color: red;
+}
+
+.insidePr {
+    border: none;
+    border-color: #fff;
+}
+
+.dateTitle {
+    font-size: 14px;
+}
+
+.fc-event-title-container:hover {
+    cursor: pointer;
+    background: #537894;
+}
+
+.nameForm {
+    font-weight: 700;
+}
+
+.ctg {
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.ctg:hover {
+    background: #537894;
+    color: #fff;
+    padding: 4px 0 4px 10px;
+    transition: 0.2s ease-in;
+}
+
+.myFrame {
+    width: 100% !important;
+    height: 600px !important;
+}
+
+#mySpin {
+    display: block;
+    position: fixed;
+    z-index: 1031;
+    top: 50%;
+    right: 50%;
+    margin-top: -50px;
+    margin-right: -50px;
+}
+
+.online-status {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #3cba54;
+    /* Green color for online status */
+    border: 2px solid #fff;
+}
+
+/* Add other status colors here */
+.offline-status {
+    background-color: #ccc;
+    /* Gray color for offline status */
+}
+
+
+/* Sélectionnez la scrollbar */
+::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    /* Largeur de la scrollbar */
+}
+
+/* Styling de la piste (track) de la scrollbar */
+::-webkit-scrollbar-track {
+    background-color: #ffffff;
+    /* Couleur de la piste */
+}
+
+/* Styling du thumb (pouce) de la scrollbar */
+::-webkit-scrollbar-thumb {
+    /* background-image: linear-gradient(to bottom, rgba(168, 85, 247, 0), rgba(168, 85, 247, 1)); */
+    background: #ebecec;
+    /* Couleur du pouce */
+    border-radius: 5px;
+    /* Bordure arrondie du pouce */
+}
+
+/* Styling du thumb (pouce) de la scrollbar lorsqu'il est survolé */
+::-webkit-scrollbar-thumb:hover {
+    /* background-image: linear-gradient(to bottom, rgba(168, 85, 247, 0), rgb(144, 53, 230)); */
+    background: #e5e6e7;
+    /* Couleur du pouce lorsqu'il est survolé */
+}
+
+/* BORDER CUSTOM ONLINE */
+.border-custom {
+    border: 1px solid #A855F7;
+}
+
+.border-custom:hover {
+    border: 1px solid #9333EA;
+}
+
+/* BORDER CUSTOM DELETE */
+.border-custom-delete {
+    border: 1px solid #DC2626;
+}
+
+.border-custom-delete:hover {
+    border: 1px solid #B91C1C;
+}
+
+/* BORDER CUSTOM OFFLINE */
+.border-custom-offLine {
+    border: 1px solid #44403C;
+}
+
+.border-custom-offLine:hover {
+    border: 1px solid #292524;
+}
+
+/* BORDER CUSTOM RESTORE */
+.border-custom-restaurer {
+    border: 1px solid #2563EB;
+}
+
+.border-custom-restaurer:hover {
+    border: 1px solid #1D4ED8;
+}
+
+.tooltip-hors-ligne {
+    padding: 1px;
+}
+
+
+.list-group-item {
+    color: #bdbdbd !important;
+    border: none;
+}
+
+/* SHAKE */
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-5px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(5px);
+    }
+}

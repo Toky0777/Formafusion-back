@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "duree": "[1 - 2 jours]"
+  },
+  {
+    "id": 2,
+    "duree": "[2 - 4 jours]"
+  },
+  {
+    "id": 3,
+    "duree": "[4 - 6 jours]"
+  },
+  {
+    "id": 4,
+    "duree": "[6 - 8 jours]"
+  },
+  {
+    "id": 5,
+    "duree": "[8 - 10 jours]"
+  },
+  {
+    "id": 6,
+    "duree": "[10 - 12 jours]"
+  },
+  {
+    "id": 7,
+    "duree": "[12 - 14 jours]"
+  }
+]

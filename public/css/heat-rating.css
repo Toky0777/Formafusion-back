@@ -1,0 +1,43 @@
+.heat-rating {
+	margin: 0px auto;
+	width: 210px;
+}
+
+.rating-block,
+.rating-block-note,
+.rating-block-before_,
+.rating-block-after_ {
+	height: 20px;
+	width: 20px;
+	display: inline-block;
+	float: left;
+	cursor: pointer;
+	opacity: 0.5;
+}
+
+.ratings {
+	font-size: 14px;
+	line-height: 20px;
+	margin-left: 10px;
+	display: inline-block;
+}
+
+.one {
+	background-color: #EE2F36;
+}
+
+.two {
+	background-color: #F7921E;
+}
+
+.three {
+	background-color: #FBCF0C;
+}
+
+.four {
+	background-color: #B4D137;
+}
+
+.five {
+	background-color: #4DB943;
+}
