@@ -94,13 +94,17 @@ def train():
     Body: {
         "historical_data": [
             {
-                "duree_jours": 5,
+                "duree_jours": 5,           # durée réelle calculée
+                "duree_standard": 5,          # durée standard du module
+                "jours_ouvres": 5,             # jours ouvrés réels
                 "nb_places": 12,
                 "mois": 3,
                 "type_projet": 2,
                 "recettes": 500000,
                 "depenses": 350000,
-                "est_rentable": 1
+                "est_rentable": 1,
+                "ratio_duree_reelle_standard": 1.0,
+                "saison": "printemps"
             },
             ...
         ]
@@ -109,65 +113,189 @@ def train():
     try:
         data = request.json
         historical_data = data.get('historical_data', [])
+        customer_id = data.get('customer_id', 'default')
         
-        if len(historical_data) < 10:
+        # Validation du nombre minimum de données
+        min_samples = 10
+        if len(historical_data) < min_samples:
+            logger.warning(f"⚠️ Pas assez de données: {len(historical_data)} < {min_samples}")
             return jsonify({
                 'success': False,
-                'error': f"Pas assez de données. Requis: 10, Reçu: {len(historical_data)}"
+                'error': f"Pas assez de données. Requis: {min_samples}, Reçu: {len(historical_data)}"
             }), 400
         
-        logger.info(f"📊 Entraînement avec {len(historical_data)} projets")
+        logger.info(f"📊 Entraînement avec {len(historical_data)} projets pour client {customer_id}")
         
         # Convertir en DataFrame
         df = pd.DataFrame(historical_data)
         
-        # Vérifier qu'on a les deux classes
-        unique_classes = df['est_rentable'].unique()
-        if len(unique_classes) < 2:
-            logger.warning(f"⚠️ Données avec une seule classe: {unique_classes}")
-            # Forcer l'équilibrage si nécessaire
-            if len(unique_classes) == 1:
-                class_value = unique_classes[0]
-                other_class = 1 - class_value
-                n_to_add = max(1, int(len(df) * 0.1))
-                for i in range(n_to_add):
-                    new_row = df.iloc[i % len(df)].copy()
-                    new_row['est_rentable'] = other_class
-                    # Ajouter un peu de bruit
-                    new_row['recettes'] = new_row['recettes'] * (0.8 if other_class == 1 else 1.2)
-                    df = pd.concat([df, pd.DataFrame([new_row])], ignore_index=True)
+        # Analyse exploratoire rapide
+        logger.info(f"📊 Aperçu des données:")
+        logger.info(f"   - Colonnes: {list(df.columns)}")
+        logger.info(f"   - Types: {df.dtypes.to_dict()}")
+        logger.info(f"   - Stats durée: min={df['duree_jours'].min()}, max={df['duree_jours'].max()}, mean={df['duree_jours'].mean():.1f}")
         
-        # Feature engineering
+        # Vérifier et traiter les valeurs manquantes
+        initial_count = len(df)
+        df = df.dropna(subset=['duree_jours', 'nb_places', 'recettes', 'depenses', 'est_rentable'])
+        if len(df) < initial_count:
+            logger.warning(f"⚠️ {initial_count - len(df)} lignes supprimées (valeurs manquantes)")
+        
+        # Vérifier les valeurs aberrantes (outliers)
+        Q1 = df['recettes'].quantile(0.25)
+        Q3 = df['recettes'].quantile(0.75)
+        IQR = Q3 - Q1
+        outliers = df[(df['recettes'] < Q1 - 3 * IQR) | (df['recettes'] > Q3 + 3 * IQR)]
+        if len(outliers) > 0:
+            logger.warning(f"⚠️ {len(outliers)} outliers détectés dans les recettes")
+        
+        # Feature engineering avancé
+        logger.info("🔧 Feature engineering en cours...")
+        
+        # 1. Ratios de base (existants)
         df['ratio_prix_duree'] = df['recettes'] / df['duree_jours'].replace(0, 1)
         df['ratio_depenses_recettes'] = df['depenses'] / df['recettes'].replace(0, 1)
         df['chiffre_affaire_par_place'] = df['recettes'] / df['nb_places'].replace(0, 1)
         
-        # Features pour le modèle
-        features = [
-            'duree_jours', 
-            'nb_places', 
-            'mois', 
-            'type_projet',
+        # 2. Nouvelles features basées sur la durée
+        if 'duree_standard' in df.columns:
+            df['ratio_duree_reelle_standard'] = df['duree_jours'] / df['duree_standard'].replace(0, 1)
+            df['est_etale'] = (df['ratio_duree_reelle_standard'] > 1.3).astype(int)
+            df['est_concentre'] = (df['ratio_duree_reelle_standard'] < 0.8).astype(int)
+        else:
+            df['ratio_duree_reelle_standard'] = 1.0
+            df['est_etale'] = 0
+            df['est_concentre'] = 0
+        
+        # 3. Features de rentabilité
+        df['marge_brute'] = (df['recettes'] - df['depenses']) / df['recettes'].replace(0, 1) * 100
+        df['marge_par_place'] = df['marge_brute'] / df['nb_places'].replace(0, 1)
+        df['seuil_rentabilite_places'] = df['depenses'] / (df['recettes'] / df['nb_places']).replace(0, 1)
+        
+        # 4. Features temporelles enrichies
+        if 'jours_ouvres' in df.columns:
+            df['ratio_jours_ouvres'] = df['jours_ouvres'] / df['duree_jours'].replace(0, 1)
+            df['intensite_weekend'] = 1 - df['ratio_jours_ouvres']
+        else:
+            df['ratio_jours_ouvres'] = 1.0
+            df['intensite_weekend'] = 0
+        
+        # 5. Features de saisonnalité
+        if 'saison' in df.columns:
+            # One-hot encoding pour les saisons
+            saison_dummies = pd.get_dummies(df['saison'], prefix='saison')
+            df = pd.concat([df, saison_dummies], axis=1)
+        else:
+            # Saison à partir du mois
+            df['saison_printemps'] = df['mois'].isin([3, 4, 5]).astype(int)
+            df['saison_ete'] = df['mois'].isin([6, 7, 8]).astype(int)
+            df['saison_automne'] = df['mois'].isin([9, 10, 11]).astype(int)
+            df['saison_hiver'] = df['mois'].isin([12, 1, 2]).astype(int)
+        
+        # 6. Features d'interaction
+        df['interaction_places_saison'] = df['nb_places'] * df['saison_printemps']
+        df['interaction_duree_type'] = df['duree_jours'] * df['type_projet']
+        df['interaction_prix_places'] = df['ratio_prix_duree'] * df['nb_places']
+        
+        # 7. Features catégorielles encodées
+        df['type_projet_nom'] = df['type_projet'].map({1: 'INTRA', 2: 'INTER', 4: 'SUR_MESURE'})
+        type_dummies = pd.get_dummies(df['type_projet_nom'], prefix='type')
+        df = pd.concat([df, type_dummies], axis=1)
+        
+        # 8. Features de performance relative
+        mean_marge = df['marge_brute'].mean()
+        df['performance_relative'] = df['marge_brute'] - mean_marge
+        df['est_sur_performant'] = (df['performance_relative'] > 10).astype(int)
+        df['est_sous_performant'] = (df['performance_relative'] < -10).astype(int)
+        
+        logger.info("✅ Feature engineering terminé")
+        
+        # Vérifier la distribution des classes
+        class_distribution = df['est_rentable'].value_counts()
+        logger.info(f"📊 Distribution des classes: {class_distribution.to_dict()}")
+        
+        # Équilibrage des classes si nécessaire
+        unique_classes = df['est_rentable'].unique()
+        if len(unique_classes) < 2:
+            logger.warning(f"⚠️ Données avec une seule classe: {unique_classes}")
+            # Forcer l'équilibrage
+            if len(unique_classes) == 1:
+                class_value = unique_classes[0]
+                other_class = 1 - class_value
+                n_to_add = max(5, int(len(df) * 0.2))
+                
+                logger.info(f"🔄 Équilibrage: ajout de {n_to_add} exemples synthétiques de classe {other_class}")
+                
+                for i in range(n_to_add):
+                    new_row = df.iloc[i % len(df)].copy()
+                    new_row['est_rentable'] = other_class
+                    # Ajouter du bruit réaliste
+                    new_row['recettes'] = new_row['recettes'] * (0.7 if other_class == 1 else 1.3)
+                    new_row['depenses'] = new_row['depenses'] * (1.3 if other_class == 1 else 0.7)
+                    new_row['nb_places'] = max(1, int(new_row['nb_places'] * np.random.uniform(0.8, 1.2)))
+                    df = pd.concat([df, pd.DataFrame([new_row])], ignore_index=True)
+        
+        # Sélection des features pour le modèle
+        base_features = [
+            'duree_jours',
+            'nb_places',
+            'mois',
             'ratio_prix_duree',
             'ratio_depenses_recettes',
-            'chiffre_affaire_par_place'
+            'chiffre_affaire_par_place',
+            'marge_brute',
+            'marge_par_place',
+            'seuil_rentabilite_places',
+            'ratio_duree_reelle_standard',
+            'est_etale',
+            'est_concentre',
+            'ratio_jours_ouvres',
+            'intensite_weekend',
+            'interaction_places_saison',
+            'interaction_duree_type',
+            'interaction_prix_places',
+            'performance_relative',
+            'est_sur_performant',
+            'est_sous_performant'
         ]
         
-        # Vérifier que toutes les colonnes existent
-        available_features = [f for f in features if f in df.columns]
+        # Ajouter les features one-hot encodées
+        saison_features = [col for col in df.columns if col.startswith('saison_')]
+        type_features = [col for col in df.columns if col.startswith('type_')]
         
-        X = df[available_features]
+        all_features = base_features + saison_features + type_features
+        
+        # Vérifier que toutes les features existent
+        available_features = [f for f in all_features if f in df.columns]
+        missing_features = set(all_features) - set(available_features)
+        
+        if missing_features:
+            logger.warning(f"⚠️ Features manquantes: {missing_features}")
+        
+        logger.info(f"📊 Utilisation de {len(available_features)} features: {available_features}")
+        
+        # Préparer X et y
+        X = df[available_features].copy()
         y = df['est_rentable'].astype(int)
         
-        logger.info(f"📊 Distribution des classes: {y.value_counts().to_dict()}")
+        # Gérer les valeurs infinies
+        X = X.replace([np.inf, -np.inf], np.nan)
         
-        # Split train/test
+        # Remplir les NaN avec la médiane
+        for col in X.columns:
+            if X[col].isna().any():
+                median_val = X[col].median()
+                X[col].fillna(median_val, inplace=True)
+                logger.info(f"   - {col}: {X[col].isna().sum()} NaN remplis avec médiane={median_val:.2f}")
+        
+        # Split train/test avec stratification
         try:
             X_train, X_test, y_train, y_test = train_test_split(
                 X, y, test_size=0.2, random_state=42, stratify=y
             )
-        except ValueError:
-            # Si stratification impossible, faire sans
+            logger.info("✅ Split avec stratification réussi")
+        except ValueError as e:
+            logger.warning(f"⚠️ Stratification impossible: {e}")
             X_train, X_test, y_train, y_test = train_test_split(
                 X, y, test_size=0.2, random_state=42
             )
@@ -177,53 +305,160 @@ def train():
         X_train_scaled = scaler.fit_transform(X_train)
         X_test_scaled = scaler.transform(X_test)
         
-        # Entraînement du modèle
+        # Entraînement du modèle avec recherche d'hyperparamètres
+        logger.info("🤖 Entraînement du modèle RandomForest...")
+        
+        # Version simple mais robuste
         model = RandomForestClassifier(
-            n_estimators=100,
-            max_depth=10,
+            n_estimators=200,
+            max_depth=15,
             min_samples_split=5,
             min_samples_leaf=2,
+            max_features='sqrt',
+            bootstrap=True,
+            oob_score=True,
             random_state=42,
-            class_weight='balanced'
+            class_weight='balanced',
+            n_jobs=-1
         )
         
         model.fit(X_train_scaled, y_train)
         
-        # Évaluation
+        # Évaluations détaillées
         train_score = model.score(X_train_scaled, y_train)
         test_score = model.score(X_test_scaled, y_test)
+        oob_score = model.oob_score_ if hasattr(model, 'oob_score_') else None
+        
+        # Prédictions pour métriques avancées
+        y_pred = model.predict(X_test_scaled)
+        y_pred_proba = model.predict_proba(X_test_scaled)
+        
+        # Calcul des métriques
+        from sklearn.metrics import (accuracy_score, precision_score, recall_score, 
+                                   f1_score, roc_auc_score, confusion_matrix)
+        
+        accuracy = accuracy_score(y_test, y_pred)
+        precision = precision_score(y_test, y_pred, zero_division=0)
+        recall = recall_score(y_test, y_pred, zero_division=0)
+        f1 = f1_score(y_test, y_pred, zero_division=0)
+        
+        # ROC AUC (si 2 classes)
+        roc_auc = None
+        if len(model.classes_) == 2:
+            try:
+                roc_auc = roc_auc_score(y_test, y_pred_proba[:, 1])
+            except:
+                roc_auc = None
+        
+        # Matrice de confusion
+        cm = confusion_matrix(y_test, y_pred).tolist() if len(y_test) > 0 else []
+        
+        logger.info(f"✅ Métriques d'évaluation:")
+        logger.info(f"   - Train Accuracy: {train_score:.3f}")
+        logger.info(f"   - Test Accuracy: {test_score:.3f}")
+        logger.info(f"   - OOB Score: {oob_score:.3f}" if oob_score else "   - OOB Score: N/A")
+        logger.info(f"   - Precision: {precision:.3f}")
+        logger.info(f"   - Recall: {recall:.3f}")
+        logger.info(f"   - F1-Score: {f1:.3f}")
+        logger.info(f"   - ROC AUC: {roc_auc:.3f}" if roc_auc else "   - ROC AUC: N/A")
         
         # Feature importance
         feature_importance = dict(zip(available_features, model.feature_importances_))
-        top_features = sorted(feature_importance.items(), key=lambda x: x[1], reverse=True)[:3]
+        top_features = sorted(feature_importance.items(), key=lambda x: x[1], reverse=True)[:5]
+        
+        logger.info(f"🔥 Top 5 features importantes:")
+        for i, (feat, imp) in enumerate(top_features, 1):
+            logger.info(f"   {i}. {feat}: {imp:.3f}")
+        
+        # Analyse des erreurs
+        errors = X_test.copy()
+        errors['true_value'] = y_test
+        errors['predicted'] = y_pred
+        errors['correct'] = (errors['true_value'] == errors['predicted'])
+        
+        false_positives = errors[(errors['true_value'] == 0) & (errors['predicted'] == 1)]
+        false_negatives = errors[(errors['true_value'] == 1) & (errors['predicted'] == 0)]
+        
+        logger.info(f"📊 Analyse des erreurs:")
+        logger.info(f"   - Faux positifs: {len(false_positives)}")
+        logger.info(f"   - Faux négatifs: {len(false_negatives)}")
+        
+        # Sauvegarde du modèle avec métadonnées
+        model_metadata = {
+            'model': model,
+            'scaler': scaler,
+            'features': available_features,
+            'training_date': datetime.now().isoformat(),
+            'n_samples': len(df),
+            'class_distribution': class_distribution.to_dict(),
+            'metrics': {
+                'accuracy': accuracy,
+                'precision': precision,
+                'recall': recall,
+                'f1_score': f1,
+                'roc_auc': roc_auc,
+                'train_score': train_score,
+                'test_score': test_score,
+                'oob_score': oob_score
+            },
+            'top_features': top_features,
+            'feature_importance': feature_importance,
+            'confusion_matrix': cm,
+            'version': '2.0.0',
+            'customer_id': customer_id
+        }
         
         # Sauvegarde
-        joblib.dump(model, MODEL_PATH)
+        joblib.dump(model_metadata, MODEL_PATH)
         joblib.dump(scaler, SCALER_PATH)
         joblib.dump(available_features, FEATURES_PATH)
         
-        logger.info(f"✅ Modèle entraîné - Train: {train_score:.3f}, Test: {test_score:.3f}")
-        logger.info(f"   Classes: {model.classes_}")
+        # Sauvegarde d'un backup horodaté
+        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+        backup_path = os.path.join(MODEL_DIR, f'model_backup_{timestamp}.pkl')
+        joblib.dump(model_metadata, backup_path)
         
-        return jsonify({
+        logger.info(f"💾 Modèle sauvegardé: {MODEL_PATH}")
+        logger.info(f"💾 Backup sauvegardé: {backup_path}")
+        
+        # Préparer la réponse
+        response = {
             'success': True,
-            'train_accuracy': float(train_score),
-            'test_accuracy': float(test_score),
+            'message': 'Modèle entraîné avec succès',
+            'training_date': model_metadata['training_date'],
             'n_samples': len(df),
             'n_features': len(available_features),
-            'top_features': top_features,
+            'class_distribution': class_distribution.to_dict(),
+            'metrics': {
+                'accuracy': float(accuracy),
+                'precision': float(precision),
+                'recall': float(recall),
+                'f1_score': float(f1),
+                'roc_auc': float(roc_auc) if roc_auc else None,
+                'train_accuracy': float(train_score),
+                'test_accuracy': float(test_score),
+                'oob_score': float(oob_score) if oob_score else None
+            },
+            'top_features': [(feat, float(imp)) for feat, imp in top_features],
+            'confusion_matrix': cm,
+            'feature_names': available_features,
             'classes': model.classes_.tolist(),
-            'message': 'Modèle entraîné avec succès'
-        })
+            'backup_path': backup_path,
+            'model_version': '2.0.0'
+        }
+        
+        logger.info(f"✅ Entraînement terminé avec succès")
+        return jsonify(response)
         
     except Exception as e:
         logger.error(f"❌ Erreur entraînement: {str(e)}")
-        logger.exception("Détails:")
+        logger.exception("Détails de l'erreur:")
         return jsonify({
             'success': False,
-            'error': str(e)
+            'error': str(e),
+            'error_type': type(e).__name__
         }), 500
-
+        
 @app.route('/predict', methods=['POST'])
 def predict():
     """

@@ -122,9 +122,6 @@ class RentabilityPredictionService
         }
     }
 
-    /**
-     * Récupérer les données historiques pour l'entraînement
-     */
     public function getHistoricalData(int $customerId = null, int $limit = 1000): array
     {
         $customerId = $customerId ?? Customer::idCustomer();
@@ -141,16 +138,16 @@ class RentabilityPredictionService
                 'p.dateFin',
                 'p.idTypeProjet as type_projet',
                 DB::raw('mod.prix * i.nbPlace as recettes'),
-                'm.dureeJ as duree_jours',
+                'm.dureeJ as duree_standard',
+                DB::raw('DATEDIFF(p.dateFin, p.dateDebut) + 1 as duree_reelle'), // ✅ Calcul de la durée réelle
                 'i.nbPlace as nb_places',
-                DB::raw('COALESCE(SUM(f.montant), 0) - (mod.prix * i.nbPlace) as depenses'),
-                DB::raw('CASE 
-                WHEN (mod.prix * i.nbPlace) > (COALESCE(SUM(f.montant), 0) - (mod.prix * i.nbPlace)) THEN 1
-                ELSE 0 
-            END as est_rentable')
+                DB::raw('COALESCE(SUM(f.montant), 0) as total_frais'),
+                DB::raw('(mod.prix * i.nbPlace) as recettes_calculees')
             )
             ->where('p.idCustomer', $customerId)
             ->where('p.idTypeProjet', 2)
+            ->whereNotNull('p.dateDebut')
+            ->whereNotNull('p.dateFin') // ✅ S'assurer qu'on a les dates
             ->groupBy(
                 'p.idProjet',
                 'p.dateDebut',
@@ -161,7 +158,7 @@ class RentabilityPredictionService
                 'mod.prix'
             );
 
-        // Projets INTRA
+        // Projets INTRA (similaire mais avec sous-requêtes)
         $intraProjects = DB::table('projets as p')
             ->join('mdls as m', 'p.idModule', '=', 'm.idModule')
             ->leftJoin('fraisprojet as f', 'p.idProjet', '=', 'f.idProjet')
@@ -172,17 +169,16 @@ class RentabilityPredictionService
                 'p.dateFin',
                 'p.idTypeProjet as type_projet',
                 DB::raw('mod.prix * (SELECT COUNT(*) FROM detail_apprenants WHERE idProjet = p.idProjet) as recettes'),
-                'm.dureeJ as duree_jours',
+                'm.dureeJ as duree_standard',
+                DB::raw('DATEDIFF(p.dateFin, p.dateDebut) + 1 as duree_reelle'),
                 DB::raw('(SELECT COUNT(*) FROM detail_apprenants WHERE idProjet = p.idProjet) as nb_places'),
-                DB::raw('COALESCE(SUM(f.montant), 0) - (mod.prix * (SELECT COUNT(*) FROM detail_apprenants WHERE idProjet = p.idProjet)) as depenses'),
-                DB::raw('CASE 
-                WHEN (mod.prix * (SELECT COUNT(*) FROM detail_apprenants WHERE idProjet = p.idProjet)) > 
-                     (COALESCE(SUM(f.montant), 0) - (mod.prix * (SELECT COUNT(*) FROM detail_apprenants WHERE idProjet = p.idProjet))) THEN 1
-                ELSE 0 
-            END as est_rentable')
+                DB::raw('COALESCE(SUM(f.montant), 0) as total_frais'),
+                DB::raw('mod.prix * (SELECT COUNT(*) FROM detail_apprenants WHERE idProjet = p.idProjet) as recettes_calculees')
             )
             ->where('p.idCustomer', $customerId)
             ->where('p.idTypeProjet', 1)
+            ->whereNotNull('p.dateDebut')
+            ->whereNotNull('p.dateFin')
             ->groupBy(
                 'p.idProjet',
                 'p.dateDebut',
@@ -199,21 +195,73 @@ class RentabilityPredictionService
 
         $historicalData = [];
         foreach ($projects as $project) {
-            if ($project->duree_jours > 0 && $project->recettes > 0 && $project->nb_places > 0) {
-                $mois = $project->dateDebut ? date('n', strtotime($project->dateDebut)) : 1;
+            // Utiliser la durée réelle si disponible, sinon la durée standard
+            $dureeJours = $project->duree_reelle ?? $project->duree_standard;
+
+            // Calculer la rentabilité avec les vraies données
+            $depenses = $project->total_frais - $project->recettes_calculees;
+            $estRentable = $project->recettes_calculees > $depenses ? 1 : 0;
+
+            // Extraire le mois de début pour la saisonnalité
+            $mois = $project->dateDebut ? date('n', strtotime($project->dateDebut)) : 1;
+
+            // Calculer la durée en jours ouvrés (optionnel)
+            $joursOuvres = $this->calculateWorkingDays($project->dateDebut, $project->dateFin);
+
+            if ($dureeJours > 0 && $project->recettes_calculees > 0 && $project->nb_places > 0) {
                 $historicalData[] = [
-                    'duree_jours' => (int) $project->duree_jours,
+                    'duree_jours' => (int) $dureeJours,
+                    'duree_standard' => (int) $project->duree_standard,
+                    'duree_reelle' => (int) ($project->duree_reelle ?? 0),
+                    'jours_ouvres' => $joursOuvres,
                     'nb_places' => (int) $project->nb_places,
                     'mois' => (int) $mois,
                     'type_projet' => (int) $project->type_projet,
-                    'recettes' => (float) $project->recettes,
-                    'depenses' => (float) $project->depenses,
-                    'est_rentable' => (int) $project->est_rentable
+                    'recettes' => (float) $project->recettes_calculees,
+                    'depenses' => (float) $depenses,
+                    'est_rentable' => (int) $estRentable,
+                    // Features supplémentaires utiles
+                    'ratio_duree_reelle_standard' => $project->duree_standard > 0 ?
+                        round($dureeJours / $project->duree_standard, 2) : 1,
+                    'saison' => $this->getSaison($mois) // printemps, été, etc.
                 ];
             }
         }
 
         return $historicalData;
+    }
+
+    /**
+     * Calcule le nombre de jours ouvrés entre deux dates
+     */
+    private function calculateWorkingDays($startDate, $endDate): int
+    {
+        $start = new \DateTime($startDate);
+        $end = new \DateTime($endDate);
+        $end = $end->modify('+1 day');
+
+        $period = new \DatePeriod($start, new \DateInterval('P1D'), $end);
+        $workingDays = 0;
+
+        foreach ($period as $date) {
+            $dayOfWeek = $date->format('N');
+            if ($dayOfWeek < 6) { // Lundi=1, Dimanche=7
+                $workingDays++;
+            }
+        }
+
+        return $workingDays;
+    }
+
+    /**
+     * Détermine la saison à partir du mois
+     */
+    private function getSaison(int $mois): string
+    {
+        if ($mois >= 3 && $mois <= 5) return 'printemps';
+        if ($mois >= 6 && $mois <= 8) return 'ete';
+        if ($mois >= 9 && $mois <= 11) return 'automne';
+        return 'hiver';
     }
 
     /**
@@ -242,9 +290,14 @@ class RentabilityPredictionService
     protected function extractFeatures(array $projectData, int $customerId): array
     {
         $module = DB::table('mdls')->where('idModule', $projectData['module_id'])->first();
+        $prixModule = DB::table('modules')->select('prix')->where('idModule', $projectData['module_id'])->first();
+
         if (!$module) {
             throw new Exception("Module non trouvé");
         }
+
+        // Extract the actual price value from the object
+        $prixModuleValue = $prixModule ? floatval($prixModule->prix) : 0;
 
         $dateDebut = isset($projectData['date_debut']) ? new \DateTime($projectData['date_debut']) : new \DateTime();
         $dateFin = isset($projectData['date_fin']) ? new \DateTime($projectData['date_fin'])
@@ -258,16 +311,15 @@ class RentabilityPredictionService
             }
         }
 
-        $prixModule = floatval($module->prix ?? 0);
         $nbPlaces = intval($projectData['nb_place'] ?? 10);
-        $caPotentiel = $prixModule * $nbPlaces;
+        $caPotentiel = $prixModuleValue * $nbPlaces; // Now using the extracted value
 
         return [
             'duree_jours' => $dureeJours,
             'nb_places' => $nbPlaces,
             'mois' => (int) $dateDebut->format('n'),
             'type_projet' => (int) ($projectData['type_projet'] ?? 2),
-            'prix_par_jour' => $dureeJours > 0 ? $prixModule / $dureeJours : 0,
+            'prix_par_jour' => $dureeJours > 0 ? $prixModuleValue / $dureeJours : 0, // Also fix here
             'chiffre_affaire_potentiel' => $caPotentiel,
             'frais_totaux_estimes' => $fraisTotaux,
             'nb_entreprises_interessees' => count($projectData['entreprises_interessees'] ?? []),

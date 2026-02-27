@@ -184,6 +184,7 @@ class RentabilityController extends Controller
         $query = DB::table('v_collaboration_cfp_etps')
             ->select('idEtp', 'etp_name', 'etp_email')
             ->where('idCfp', Customer::idCustomer())
+            ->whereNot('etp_name', 'like', '%PRODECID%')
             ->orderBy('etp_name', 'ASC')
             ->get();
 
