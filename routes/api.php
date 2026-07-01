@@ -884,6 +884,10 @@ Route::middleware(['auth:sanctum', 'isEmployeCfp'])->group(function () {
         Route::get('/chiffre/dossier/{year}', [ChiffreAffaireRepportingCfp::class, 'caFolderYear']);
         Route::get('/chiffre/ville', [ChiffreAffaireRepportingCfp::class, 'caPlace'])->name('reporting.caPlace');
         Route::get('/chiffre/ville/{year}', [ChiffreAffaireRepportingCfp::class, 'caPlaceYear']);
+
+        Route::get('/month-simple/{year}', [ChiffreAffaireRepportingCfp::class, 'caMonthYearSimple']);
+        // Route d'export Excel
+        Route::get('/month-export/{year}', [ChiffreAffaireRepportingCfp::class, 'caMonthYearExport']);
     });
 
     // Projet
