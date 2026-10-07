@@ -8,7 +8,6 @@ use App\Interfaces\FormateurInterface;
 use App\Interfaces\InvitationInterface as InvitationInterfaceClean;
 use App\Interfaces\LieuInterface;
 use App\Interfaces\UserRegisterInterface;
-use App\Models\User;
 use App\Services\ApprenantService;
 use App\Services\CfpService;
 use App\Services\CustomerOther\Employe\StoreService;
@@ -55,8 +54,9 @@ class AppServiceProvider extends ServiceProvider
         View::composer('*', function ($view) {
             if (Auth::check()) {
                 $authenticatedUser = Auth::user();
-                $user = User::findOrFail($authenticatedUser->id);
-                $subscriptions = $user->planSubscriptions()->with('plan')->first();
+                // $user = User::findOrFail($authenticatedUser->id);
+                // $subscriptions = $user->planSubscriptions()->with('plan')->first();
+                $subscriptions = null;
 
                 // if (Auth::user()->id === 1) {
                 //     $infoProfilCfp = DB::table('customers')

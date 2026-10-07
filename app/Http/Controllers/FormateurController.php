@@ -22,8 +22,8 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 use Intervention\Image\Drivers\Gd\Driver;
 use Intervention\Image\ImageManager;
-use Laravelcm\Subscriptions\Models\Feature;
-use Laravelcm\Subscriptions\Models\Subscription;
+// use Laravelcm\Subscriptions\Models\Feature;
+// use Laravelcm\Subscriptions\Models\Subscription;
 use Termwind\Components\Raw;
 use App\Services\FormateurService;
 use App\Services\BrevoService;
@@ -1997,6 +1997,7 @@ class FormateurController extends Controller
 
     public function sendInvitation(Request $req)
     {
+        /*
         // LIMITEUR PAR RAPPORT AU ABONNEMENT
         $authenticatedUser = Customer::idCustomer();
         $user = Customer::findOrFail($authenticatedUser);
@@ -2024,6 +2025,7 @@ class FormateurController extends Controller
             return response()->json(['error' => 'Vous avez atteint le nombre maximum de formateurs autorisés.']);
         }
         // FIN LIMITEUR PAR RAPPORT AU ABONNEMENT 
+        */
 
         $validate = Validator::make($req->all(), [
             'form_name' => 'required|min:2|max:200',
@@ -2095,7 +2097,7 @@ class FormateurController extends Controller
                     }
 
                     DB::commit();
-                    $subscription->recordFeatureUsage($featureSlug);
+                    // $subscription->recordFeatureUsage($featureSlug);
                     return response()->json(['success' => 'Invitation envoyée avec succès']);
                 } elseif (count($checkForm) >= 1 && count($checkFormateur) >= 1 && count($checkCfpFormActive) <= 0 && count($checkCfpFormInactive) <= 0) {
                     try {
@@ -2122,7 +2124,7 @@ class FormateurController extends Controller
                         // Mail::to($req->form_email)->send(new CfpInviteFormCreated($cfp, $form));
 
                         DB::commit();
-                        $subscription->recordFeatureUsage($featureSlug);
+                        // $subscription->recordFeatureUsage($featureSlug);
                         return response()->json(['success' => 'Invitation envoyée avec succès']);
                     } catch (Exception $e) {
                         DB::rollBack();
@@ -2189,7 +2191,7 @@ class FormateurController extends Controller
                 }
 
                 DB::commit();
-                $subscription->recordFeatureUsage($featureSlug);
+                // $subscription->recordFeatureUsage($featureSlug);
                 return response()->json(['success' => 'Invitation envoyée avec succès']);
             } else {
                 return response()->json(['error' => 'Le formateur est déjas en collaboration avec vous']);

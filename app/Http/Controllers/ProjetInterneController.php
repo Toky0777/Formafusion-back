@@ -14,8 +14,8 @@ use App\Models\Customer;
 use App\Services\ProjetService;
 use App\Services\UtilService;
 use Illuminate\Support\Facades\Log;
-use Laravelcm\Subscriptions\Models\Feature;
-use Laravelcm\Subscriptions\Models\Subscription;
+// use Laravelcm\Subscriptions\Models\Feature;
+// use Laravelcm\Subscriptions\Models\Subscription;
 use stdClass;
 
 class ProjetInterneController extends Controller
@@ -256,6 +256,7 @@ class ProjetInterneController extends Controller
 
     public function store(Request $req)
     {
+        /*
         // LIMITEUR PAR RAPPORT AU ABONNEMENT
         $authenticatedUser = Customer::idCustomer();
         $user = Customer::findOrFail($authenticatedUser);
@@ -283,6 +284,7 @@ class ProjetInterneController extends Controller
             return response()->json(['error' => 'Vous avez atteint le nombre maximum de projets autorisés.']);
         }
         // FIN LIMITEUR PAR RAPPORT AU ABONNEMENT
+        */
 
         $validate = Validator::make($req->all(), [
             'project_title' => 'required|min:2|max:150'
@@ -316,7 +318,7 @@ class ProjetInterneController extends Controller
                 ]);
 
                 DB::commit();
-                $subscription->recordFeatureUsage($featureSlug);
+                // $subscription->recordFeatureUsage($featureSlug);
                 return response()->json([
                     'status' => 200,
                     'message' => 'Succès',
