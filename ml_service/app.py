@@ -128,6 +128,28 @@ def train():
         
         # Convertir en DataFrame
         df = pd.DataFrame(historical_data)
+
+        if 'type_projet' in df.columns:
+            type_names = {
+                'INTRA': 1,
+                'INTER': 2,
+                'SUR_MESURE': 4,
+                'SUR MESURE': 4,
+                'SUR-MESURE': 4
+            }
+            normalized_types = df['type_projet'].map(
+                lambda value: type_names.get(value.strip().upper(), value)
+                if isinstance(value, str) else value
+            )
+            numeric_types = pd.to_numeric(normalized_types, errors='coerce')
+            invalid_types = df['type_projet'].notna() & numeric_types.isna()
+            if invalid_types.any():
+                values = df.loc[invalid_types, 'type_projet'].astype(str).unique().tolist()
+                return jsonify({
+                    'success': False,
+                    'error': f"Types de projet non reconnus: {values}"
+                }), 400
+            df['type_projet'] = numeric_types
         
         # Analyse exploratoire rapide
         logger.info(f"📊 Aperçu des données:")
@@ -261,7 +283,7 @@ def train():
         
         # Ajouter les features one-hot encodées
         saison_features = [col for col in df.columns if col.startswith('saison_')]
-        type_features = [col for col in df.columns if col.startswith('type_')]
+        type_features = type_dummies.columns.tolist()
         
         all_features = base_features + saison_features + type_features
         
